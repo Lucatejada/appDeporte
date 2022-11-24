@@ -4,7 +4,7 @@ error_reporting(E_ALL ^ E_WARNING);
 
 <!-- form section start -->
 <section class="w3l-hotair-form" style="background-color: #e3f2fd;">
-    <h1 style="color: black;">Registro Deporte </h1>
+    <h1 style="color: black;"> Prueba registro deporte </h1>
     <div class="container">
         <!-- /form -->
         <div class="workinghny-form-grid " >
@@ -24,9 +24,9 @@ error_reporting(E_ALL ^ E_WARNING);
 
                     <p class="account">Ya tienes una cuenta? <a href="index.php?pagina=ingreso">Ingresa</a></p>
                 </div>
-                <div class="w3l_form align-self">
+                <div class="w3l_form align-self text-center">
                     <div class="left_grid_info">
-                        <img src="images/1.png" alt="" class="img-fluid">
+                        <img src="../../images/muni.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

@@ -8,15 +8,18 @@ $dni = $_POST["dni"];
 
 //Creamos consulta con query y buscamos coincidencias con los datos 
 $query = mysqli_query($conexion, "SELECT * FROM dbdeporte WHERE nombre = '$nombre' and 
-apellido = '$apellido' and dni = '$dni'"); 
+apellido = '$apellido' and dni = '$dni'");
 //almacena el numero de fila 
 $nr = mysqli_num_rows($query);
 
-if ($nr == true) {
-    header("Location: ../index.php?pagina=principal");
+if ($nr == 1) {
+    
     session_start();
-  
+    header("Location: ../index.php?pagina=principal");
+    $_SESSION['ingreso']=true;
 }
+
+
 
 
 ?>

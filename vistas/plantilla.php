@@ -29,9 +29,9 @@
 <body style="background-color: #e3f2fd;">
     <!-- BOTONERA -->
 
-    <div class="pt-5 container-fluid">
+    <div class="pt-5 container-fluid" style="background-color: #e3f2fd;">
         <div class="container">
-            <ul class="nav justify-content-center nav-pills" style="background-color: #e3f2fd;">
+            <ul class="nav justify-content-center nav-pills">
 
                 <?php if (isset($_GET["pagina"])) : ?>
                     <?php if ($_GET["pagina"] == "registro") : ?>
@@ -44,9 +44,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=salir">Salir</a>
-                        </li>
+                    
                     <?php endif ?>
 
                     <?php if ($_GET["pagina"] == "ingreso") : ?>
@@ -57,17 +55,13 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="index.php?pagina=ingreso">Ingreso</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=salir">Salir</a>
-                        </li>
+                        
                     <?php endif  ?>
 
                     <?php if ($_GET["pagina"] == "principal") : ?>
-
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=registro">Registro</a>
                         </li>
@@ -84,7 +78,23 @@
                         <?php
                         require_once('controladores/controlador.asistecia.php');
                         controladorUsuario::ctrAsistencia();
-                        ?>
+                        ?>                                                               
+                    <?php endif  ?>
+
+                    <?php if ($_GET["pagina"] == "salir") : ?>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?pagina=registro">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?pagina=ingreso">Ingreso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.php?pagina=principal">Principal</a>
+                        </li>
+                        
+
+
                     <?php endif  ?>
 
                 <?php else :
@@ -109,7 +119,7 @@
             #LISTA BLANCA DE URL
 
             if (isset($_GET["pagina"])) {
-                
+
                 if (
                     $_GET["pagina"] == "registro" ||
                     $_GET["pagina"] == "ingreso" ||
@@ -119,11 +129,9 @@
 
                     include_once "paginas/" . $_GET["pagina"] . ".php";
                 } else {
-
                     include_once "paginas/error404.php";
                 }
             } else {
-
                 include_once "paginas/registro.php";
             }
 
