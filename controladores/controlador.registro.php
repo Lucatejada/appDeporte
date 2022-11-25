@@ -8,15 +8,21 @@ $domicilio = $_POST['domicilio'];
 
 // var_dump($_POST);
 
+$conexion = new mysqli("localhost", "root", "", "test");
+
 $sql = "INSERT INTO dbdeporte (dni, nombre, apellido, telefono, domicilio) VALUES ('$dni','$nombre', '$apellido', '$telefono', '$domicilio')";
-require_once("../modelos/conexion.php");
-$query = mysqli_query($conexion, $sql);
 
 
-if ($query == true) {
+if (mysqli_query($conexion, $sql)) {
     $_SESSION['usuarioRegistrado'] = true; 
     header("Location: ../index.php?pagina=ingreso");
+} else {
+  
+    header("Location: ../index.php?pagina=registro");
 
 }
+
+
+
 
  ?>

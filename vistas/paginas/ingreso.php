@@ -38,6 +38,18 @@ session_start();
                     }
                     ?>
 
+                    <?php
+                    if ($_SESSION['usuarioRepetido'] == true) {
+                    ?>
+                        <div class="alert alert-danger text-center" role="alert">
+                            Te re cuesta <br>
+                            Ingrese nuevamente.
+                        </div>
+                    <?php
+                        unset($_SESSION['sessionexpirada']);
+                    }
+                    ?>
+
                     <form action="/modelos/loginModelo.php" method="post" autocomplete="off">
                         <input type="text" placeholder="Ingrese su DNI" name="dni" required="" autofocus>
                         <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
