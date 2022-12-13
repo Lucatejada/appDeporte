@@ -7,7 +7,6 @@ session_start();
 
 <!-- form section start -->
 <section class="w3l-hotair-form" style="background-color: #e3f2fd;">
-    <h1 style="color: black;">Prueba Ingreso Deporte</h1>
     <div class="container">
         <!-- /form -->
         <div class="workinghny-form-grid">
@@ -39,19 +38,19 @@ session_start();
                     ?>
 
                     <?php
-                    if ($_SESSION['usuarioRepetido'] == true) {
+                    if ($_SESSION['datosMal'] == true) {
                     ?>
                         <div class="alert alert-danger text-center" role="alert">
                             Te re cuesta <br>
                             Ingrese nuevamente.
                         </div>
                     <?php
-                        unset($_SESSION['sessionexpirada']);
+                        unset($_SESSION['datosMal']);
                     }
                     ?>
 
                     <form action="/modelos/loginModelo.php" method="post" autocomplete="off">
-                        <input type="text" placeholder="Ingrese su DNI" name="dni" required="" autofocus>
+                        <input type="text" placeholder="Ingrese su cuil" name="cuil" required="" autofocus>
                         <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
                         <input type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
                         <button class="btn" type="submit">Ingresar</button>

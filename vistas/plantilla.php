@@ -96,7 +96,7 @@
                     <?php endif  ?>
 
                 <?php else :
-                    header('location: ../index.php?pagina=ingreso');
+                    header('location: ../index.php?pagina=registro');
                 ?>
                 <?php endif  ?>
 
@@ -122,6 +122,7 @@
                     $_GET["pagina"] == "registro" ||
                     $_GET["pagina"] == "ingreso" ||
                     $_GET["pagina"] == "principal" ||
+                    $_GET["pagina"] == "inscripcion" ||
                     $_GET["pagina"] == "salir"
                 ) {
 

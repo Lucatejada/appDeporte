@@ -3,7 +3,7 @@ error_reporting(0);
 //Unimos usuario a post para que reciba los datos del form 
 $nombre=$_POST['nombre'];
 $apellido=$_POST['apellido'];
-$dni=$_POST['dni'];
+$dni=$_POST['cuil'];
 //creamos el inicio de session 
 session_start();
 //Hacemos el inicio de sesion por nombre

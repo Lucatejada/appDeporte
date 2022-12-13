@@ -104,7 +104,8 @@ p {
 .btn,
 button,
 .actionbg,
-input {
+input,
+select {
     border-radius: 36px;
     -webkit-border-radius: 36px;
     -moz-border-radius: 36px;
@@ -281,6 +282,26 @@ p.account a:hover {
     -ms-transition: .3s ease;
     -o-transition: .3s ease;
 }
+
+.w3l-hotair-form select{
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    background: #f7fafc;
+    border: 1px solid #e5e5e5;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
 .w3l-hotair-form input:focus {
     background:transparent;
     border: 1px solid #0568C1;
