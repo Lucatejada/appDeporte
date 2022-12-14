@@ -33,6 +33,14 @@
 
                 <?php if (isset($_GET["pagina"])) : ?>
                     <?php if ($_GET["pagina"] == "registro") : ?>
+                        <?php
+                        require('controladores/controlador.actividades.php');
+                        ctrActividades::ctrMostrarActividades();
+
+                        require_once('controladores/controlador.distrito.php');
+                        ctrDistrito::ctrMostrarDistritos();
+                        ?>
+
                         <li class="nav-item">
                             <a class="nav-link active" href="index.php?pagina=registro">Registro</a>
                         </li>
@@ -43,14 +51,7 @@
                             <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                         </li>
                         <!-- Muestrta los distritos en el select del registro  -->
-                        <?php
-                        require_once('controladores/controlador.actividades.php');
-                        ctrActividades::ctrMostrarActividades();
-                        ?>
-                        <?php
-                        require_once('controladores/controlador.distrito.php');
-                        ctrDistrito::ctrMostrarDistritos();
-                        ?>
+
 
                     <?php endif ?>
 
