@@ -1,12 +1,12 @@
 <?php
 
-class controlActividades {
+class ctrActividades {
 
-    public static function ctractividades(){
+    public static function ctrMostrarActividades(){
         require_once("modelos/modelo.actividades.php");
         $mdlActividades = new mdlActividades(); 
-        $listaActividades = $mdlActividades->mostrarAsistencia();
-        require_once("vistas/paginas/principal.php"); 
+        $listaActividades = $mdlActividades->mostrarActividades();
+        require_once("vistas/paginas/registro.php"); 
     }
 }
 

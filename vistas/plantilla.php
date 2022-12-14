@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8" />
-    
+
     <!--/Style-CSS -->
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
     <!--//Style-CSS -->
@@ -42,7 +42,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                         </li>
-                    
+                        <!-- Muestrta los distritos en el select del registro  -->
+                        <?php
+                        require_once('controladores/controlador.actividades.php');
+                        ctrActividades::ctrMostrarActividades();
+                        ?>
+                        <?php
+                        require_once('controladores/controlador.distrito.php');
+                        ctrDistrito::ctrMostrarDistritos();
+                        ?>
+
                     <?php endif ?>
 
                     <?php if ($_GET["pagina"] == "ingreso") : ?>
@@ -56,7 +65,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                         </li>
-                        
+
                     <?php endif  ?>
 
                     <?php if ($_GET["pagina"] == "principal") : ?>
@@ -76,7 +85,7 @@
                         <?php
                         require_once('controladores/controlador.asistecia.php');
                         controladorUsuario::ctrAsistencia();
-                        ?>                                                               
+                        ?>
                     <?php endif  ?>
 
                     <?php if ($_GET["pagina"] == "salir") : ?>
@@ -90,7 +99,7 @@
                         <li class="nav-item">
                             <a class="nav-link " href="index.php?pagina=principal">Principal</a>
                         </li>
-                        
+
 
 
                     <?php endif  ?>
@@ -122,7 +131,7 @@
                     $_GET["pagina"] == "registro" ||
                     $_GET["pagina"] == "ingreso" ||
                     $_GET["pagina"] == "principal" ||
-                    $_GET["pagina"] == "inscripcion" ||
+
                     $_GET["pagina"] == "salir"
                 ) {
 

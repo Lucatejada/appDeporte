@@ -3,7 +3,7 @@
 class mdlActividades
 {
 
-    public function mostrarAsistencia()
+    public function mostrarActividades()
     {
         require_once("conexion.php");
         $sql = "SELECT * FROM actividades";

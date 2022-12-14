@@ -33,13 +33,6 @@ if (isset($_SESSION['ingreso'])) {
                                 <tr>
                                     <td> <?= $asistencia["cuil"] ?></td>
                                     <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
-                                    
-                                    foreach ($listadoActividades as ){
-                                        <td><?= $asistencia["actividades"] . " " . $asistencia["actividades"] ?></td>
-
-                                    }
-                                    
-
                                 </tr>
                             <?php
                             }

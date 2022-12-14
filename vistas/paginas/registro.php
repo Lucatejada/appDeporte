@@ -1,6 +1,3 @@
-<?php
-error_reporting(E_ALL ^ E_WARNING);
-?>
 
 <!-- form section start -->
 <section class="w3l-hotair-form" style="background-color: #e3f2fd;">
@@ -17,16 +14,31 @@ error_reporting(E_ALL ^ E_WARNING);
                         <input type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
                         <input type="text" placeholder="Ingrese su cuil sin guiones ni puntos" name="cuil" required="" autofocus>
                         <input type="text" placeholder="Ingrese su telefono" name="telefono" required="" autofocus>
-                        <input type="text" placeholder="Ingrese el distrito al que pertenece" name="domicilio" required="" autofocus>
+                        <!-- <input type="text" placeholder="Ingrese el distrito al que pertenece" name="domicilio" required="" autofocus> -->
+
                         <select aria-label="Default select example" name="actividades" require="">
                             <option selected>Seleccione la actividad</option>
-                            <option value="1">Basquet</option>
-                            <option value="2">Futbol</option>
-                            <option value="3">Voley</option>
-                            <option value="3">Handball</option>
-                            <option value="3">Natacion</option>
-                            <option value="3">Otro</option>
+                            <?php
+                            foreach ($listaActividades as $actividades) {
+                            ?>
+                                <option value="<?= $actividades['actividad_id'] ?>"> <?= $actividades['nombre'] ?></option>
+                            <?php
+                            }
+                            ?>
                         </select> <br>
+
+                        <select aria-label="Default select example" name="distritos" require="">
+                            <option selected>Seleccione su distrito</option>
+                            <?php
+                            foreach ($listaDistritos as $distritos) {
+                            ?>
+                                <option value="<?= $distritos['id'] ?>"> <?= $distritos['nombre'] ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select> <br>
+
+
                         <button class="btn" type="submit">Registrate</button>
                     </form>
 
@@ -34,7 +46,7 @@ error_reporting(E_ALL ^ E_WARNING);
                 </div>
                 <div class="w3l_form align-self text-center">
                     <div class="left_grid_info">
-                        <img src="../../images/muni.png" alt="" class="img-fluid">
+                        <img src="../../images/1.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
