@@ -4,7 +4,7 @@ if (!isset($_REQUEST['c'])) {
     
     $controller = $_REQUEST['c'];
 
-    require_once('../controladores' . $controller . '.php');
+    require_once('../controladores/controlador.' . $controller . '.php');
 
     if (isset($_REQUEST['a'])) {
         $accion = $_REQUEST['a'];

@@ -1,4 +1,3 @@
-
 <?php
 
 #El INDEX va a mostrar la salida de las vistas al ususario y tambiein a traves de él enviaremos
@@ -10,17 +9,22 @@ saltará un error " PHP Fatal error " y el programa PHP se detendrá .
 
 #La versión require_once ( ) funcionan de la misma forma que sus respectivo , salvo que , al utilizar la versión
 once , se impide la carga de un mismo archivo más de una vez .
-*/ 
-
-require_once "controladores/plantilla.controlador.php";
-// require_once "controladores/formularios.controlador.php";
-// require_once "modelos/formularios.modelo.php";
+*/
 
 
-
-$plantilla = new ControladorPlantilla();
-$plantilla -> ctrTraerPlantilla(); #treamos al metodo
-
+switch ($_GET['pagina']) {
+    case 'registro':
+        require_once('controladores/controlador.registro.php');
+        ctrRegistro::mostrarPaginaRegistro();
+        break;
+    case 'ingreso':
+        require_once('controladores/controlador.ingreso.php');
+        ctrIngreso::mostrarPaginaIngreso();
+        break;
+    case 'principal':
+        require_once('controladores/controlador.asistencia.php');
+        controladorUsuario::ctrAsistencia();
+}
 
 
 

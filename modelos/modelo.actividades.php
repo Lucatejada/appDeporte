@@ -1,18 +1,13 @@
 <?php
-
-class mdlActividades
+require_once('conexion.php');
+class mdlActividades extends Conexion
 {
 
     public function mostrarActividades()
     {
-        require_once("conexion.php");
         $sql = "SELECT * FROM actividades";
-        $resultado = $conexion->query($sql);
+        $resultado = $this->conexion->query($sql);
         $listaActividades = $resultado->fetch_all(MYSQLI_ASSOC);
         return $listaActividades;
-
     }
-
 }
-
-?>

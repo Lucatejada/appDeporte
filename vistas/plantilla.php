@@ -33,14 +33,7 @@
 
                 <?php if (isset($_GET["pagina"])) : ?>
                     <?php if ($_GET["pagina"] == "registro") : ?>
-                        <?php
-                        require('controladores/controlador.actividades.php');
-                        ctrActividades::ctrMostrarActividades();
-
-                        require_once('controladores/controlador.distrito.php');
-                        ctrDistrito::ctrMostrarDistritos();
-                        ?>
-
+                        
                         <li class="nav-item">
                             <a class="nav-link active" href="index.php?pagina=registro">Registro</a>
                         </li>
@@ -83,10 +76,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=salir">Salir</a>
                         </li>
-                        <?php
-                        require_once('controladores/controlador.asistecia.php');
-                        controladorUsuario::ctrAsistencia();
-                        ?>
                     <?php endif  ?>
 
                     <?php if ($_GET["pagina"] == "salir") : ?>

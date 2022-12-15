@@ -1,18 +1,16 @@
 <?php
 
-class mdlDistrito
+require_once('conexion.php');
+
+class mdlDistrito extends Conexion
 {
 
     public function mostrarDistrito()
     {
-        require_once("conexion.php");
+
         $sql = "SELECT * FROM distritos";
-        $resultado = $conexion->query($sql);
+        $resultado = $this->conexion->query($sql);
         $listaDistritos = $resultado->fetch_all(MYSQLI_ASSOC);
         return $listaDistritos;
-
     }
-
 }
-
-?>

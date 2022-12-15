@@ -49,7 +49,7 @@ session_start();
                     }
                     ?>
 
-                    <form action="/modelos/loginModelo.php" method="post" autocomplete="off">
+                    <form action="controladores/controlador.login.php" method="post" autocomplete="off">
                         <input type="text" placeholder="Ingrese su cuil" name="cuil" required="" autofocus>
                         <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
                         <input type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
