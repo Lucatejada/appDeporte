@@ -1,4 +1,6 @@
-
+<?php
+ error_reporting(0);
+?>
 <!-- form section start -->
 <section class="w3l-hotair-form" style="background-color: #e3f2fd;">
     <div class="container">
@@ -9,7 +11,7 @@
                     <h2> Registrate </h2>
 
 
-                    <form action="../../controladores/controlador.registro.php" method="post" autocomplete="off">
+                    <form action="vistas/inicio.php?c=controladorRegistro&a=registrarUsuario" method="post" autocomplete="off">
                         <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
                         <input type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
                         <input type="text" placeholder="Ingrese su cuil sin guiones ni puntos" name="cuil" required="" autofocus>

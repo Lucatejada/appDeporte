@@ -2,51 +2,91 @@
 session_start();
 if (isset($_SESSION['ingreso'])) {
 ?>
-    <!DOCTYPE html>
+    <!doctype html>
     <html lang="en">
 
     <head>
-        <title>Principal</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="#" />
+        <title>Tutorial DataTables</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+        <!-- CSS personalizado -->
+        <link rel="stylesheet" href="../../js/main.js">
+
+        <!--datables CSS básico-->
+        <link rel="stylesheet" type="text/css" href="../../datatables/datatables.min.css" />
+        <!--datables estilo bootstrap 4 CSS-->
+        <!-- <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css"> -->
+
+        <!--font awesome con CDN-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+        <!-- jQuery, Popper.js, Bootstrap JS -->
+        <script src="../../jquery/jquery-3.3.1.min.js"></script>
+        <script src="../../popper/popper.min.js"></script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- datatables JS -->
+        <script type="text/javascript" src="../../datatables/datatables.min.js"></script>
+
+        <!-- para usar botones en datatables JS -->
+        <script src="../../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>
+        <script src="../../datatables/JSZip-2.5.0/jszip.min.js"></script>
+        <script src="../../datatables/pdfmake-0.1.36/pdfmake.min.js"></script>
+        <script src="../../datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+        <script src="../../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+
+        <!-- código JS propìo-->
+        <script type="text/javascript" src="../../js/main.js"></script>
+
     </head>
 
-    <body style="background-color: #e3f2fd;">
+    <body>
 
-        <div class="container text-center pt-4">
-            <div>
-                <div>
-                    <h2>Prueba pagina Principal</h2> <br><br>
-                    <table class="table ">
-                        <thead>
-                            <tr>
-                                <th scope="col">Cuil</th>
-                                <th scope="col">Nombre completo</th>
-                                <th scope="col">Entrada</th>
-                                <th scope="col">Asistencia</th>
+        <div style="height:50px"></div>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-
-                            foreach ($listadoAsistencia as $asistencia) {
-                            ?>
+        <!--Ejemplo tabla con DataTables-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="table-responsive">
+                        <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
                                 <tr>
-                                    <td> <?= $asistencia["cuil"] ?></td>
-                                    <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
+                                    <th scope="col">Cuil</th>
+                                    <th scope="col">Nombre completo</th>
+                                    <th scope="col">Asistencia</th>
+
+
                                 </tr>
-                            <?php
-                            }
+                            </thead>
+                            <tbody>
+                                <?php
 
-                            ?>
+                                foreach ($listaAsistencia as $asistencia) {
+                                ?>
+                                    <tr>
+                                        <td> <?= $asistencia["cuil"] ?></td>
+                                        <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
+                                    </tr>
+                                <?php
+                                }
 
-                        </tbody>
-                    </table><br><br>
-                    <a class="btn btn-primary" href="index.php?pagina=ingreso"> Regresar</a>
+                                ?>
+
+                            </tbody>
+                        </table><br><br>
+                        <a class="btn btn-primary" href="index.php?pagina=ingreso"> Regresar</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        
+
     </body>
 
     </html>

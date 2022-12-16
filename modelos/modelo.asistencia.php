@@ -13,17 +13,4 @@ class mdlAsistencia extends Conexion
         return $listaAsistencia;
     }
 
-
-    public static function mdlPresente($usuario)
-    {
-
-        // require_once("conexion.php"); 
-        // $sql = "UPDATE asistencia SET dia=getdate(),entrada=now(),usuario-dni='$usuario'";
-        // $resultado = $conexion->query($sql);
-        echo "aaaaaa";
-    }
-
-    public function mdlAusente()
-    {
-    }
 }

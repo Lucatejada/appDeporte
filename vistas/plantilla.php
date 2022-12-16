@@ -19,6 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/0b4b023277.js" crossorigin="anonymous"></script>
+    
 
 
 </head>
@@ -69,7 +70,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=ingreso">Ingreso</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link active" href="index.php?pagina=principal">Principal</a>
                         </li>
@@ -121,7 +121,7 @@
                     $_GET["pagina"] == "registro" ||
                     $_GET["pagina"] == "ingreso" ||
                     $_GET["pagina"] == "principal" ||
-
+                    $_GET["pagina"] == "descarga" ||
                     $_GET["pagina"] == "salir"
                 ) {
 
