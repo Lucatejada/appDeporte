@@ -1,5 +1,6 @@
 <?php
- error_reporting(0);
+session_start();
+error_reporting(0);
 ?>
 <!-- form section start -->
 <section class="w3l-hotair-form" style="background-color: #e3f2fd;">
@@ -8,8 +9,19 @@
         <div class="workinghny-form-grid ">
             <div class="main-hotair">
                 <div class="content-wthree">
-                    <h2> Registrate </h2>
+                    <h2> Pre-Inscripcion </h2>
 
+                    <?php
+                    if ($_SESSION['cuilRepetido'] == true) {
+                    ?>
+                        <div class="alert alert-danger text-center" role="alert">
+                            Usuario registrado <br>
+                            por favor inicie sesion.
+                        </div>
+                    <?php
+                        unset($_SESSION["cuilRepetido"]);
+                    }
+                    ?>
 
                     <form action="vistas/inicio.php?c=controladorRegistro&a=registrarUsuario" method="post" autocomplete="off">
                         <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
@@ -41,10 +53,9 @@
                         </select> <br>
 
 
-                        <button class="btn" type="submit">Registrate</button>
+                        <button class="btn" type="submit">Inscribite</button>
                     </form>
 
-                    <p class="account">Ya tienes una cuenta? <a href="index.php?pagina=ingreso">Ingresa</a></p>
                 </div>
                 <div class="w3l_form align-self text-center">
                     <div class="left_grid_info">

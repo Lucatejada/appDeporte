@@ -6,6 +6,7 @@ $nombre = $_POST["nombre"];
 $apellido = $_POST["apellido"];
 $cuil = $_POST["cuil"];
 
+
 $loginModel = new LoginModelo();
 
 //almacena el numero de fila 

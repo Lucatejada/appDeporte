@@ -24,6 +24,10 @@ switch ($_GET['pagina']) {
     case 'principal':
         require_once('controladores/controlador.asistencia.php');
         controladorUsuario::ctrAsistencia();
+        break;
+    case 'salud':
+        require_once('vistas/paginas/salud.php');
+        break;
     
 }
 } else {

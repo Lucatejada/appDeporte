@@ -2,7 +2,6 @@
 
 class controladorRegistro
 {
-
     public static function mostrarPaginaRegistro()
     {
         require_once("modelos/modelo.actividades.php");
@@ -23,19 +22,15 @@ class controladorRegistro
         $apellido = $_POST['apellido'];
         $cuil = $_POST['cuil'];
         $telefono = $_POST['telefono'];
-        $domicilio = $_POST['domicilio'];
         $actividades = $_POST['actividades'];
 
         $mdlUsuario = new mdlUsuario();
-        if ($mdlUsuario->registrarUsuarioM($cuil, $nombre, $apellido, $telefono, $domicilio)) {
+        if ($mdlUsuario->registrarUsuarioM($cuil, $nombre, $apellido, $telefono)) {
             $_SESSION['usuarioRegistrado'] = true;
             header("Location: ../index.php?pagina=ingreso");
         } else {
+            $_SESSION['cuilRepetido'] = true;
             header("Location: ../index.php?pagina=registro");
         }
     }
-
 }
-
-
-?>

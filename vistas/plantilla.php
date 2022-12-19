@@ -35,14 +35,7 @@
                 <?php if (isset($_GET["pagina"])) : ?>
                     <?php if ($_GET["pagina"] == "registro") : ?>
                         
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.php?pagina=registro">Registro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="index.php?pagina=ingreso">Ingreso</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.php?pagina=principal">Principal</a>
+                      
                         </li>
                         <!-- Muestrta los distritos en el select del registro  -->
 
@@ -121,7 +114,7 @@
                     $_GET["pagina"] == "registro" ||
                     $_GET["pagina"] == "ingreso" ||
                     $_GET["pagina"] == "principal" ||
-                    $_GET["pagina"] == "descarga" ||
+                    $_GET["pagina"] == "salud" ||
                     $_GET["pagina"] == "salir"
                 ) {
 
