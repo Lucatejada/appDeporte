@@ -59,7 +59,7 @@ if (isset($_SESSION['ingreso'])) {
                                 <tr>
                                     <th scope="col">Cuil</th>
                                     <th scope="col">Nombre completo</th>
-                                    <th scope="col">Asistencia</th>
+                                    
 
 
                                 </tr>
