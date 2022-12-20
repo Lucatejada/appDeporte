@@ -28,6 +28,9 @@ switch ($_GET['pagina']) {
     case 'salud':
         require_once('vistas/paginas/salud.php');
         break;
+    case 'salir':
+        require_once('vistas/paginas/salir.php');
+        break;
     
 }
 } else {

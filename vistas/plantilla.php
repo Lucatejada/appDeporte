@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <title>Sistema deporte</title>
@@ -53,6 +53,22 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?pagina=salud">Formulario</a>
+                        </li>
+
+                    <?php endif  ?>
+                    <?php if ($_GET["pagina"] == "salud") : ?>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?pagina=registro">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?pagina=ingreso">Ingreso</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.php?pagina=salud">Principal</a>
+                        </li>
 
                     <?php endif  ?>
 
@@ -104,8 +120,8 @@
         <div class="container">
 
             <?php
-            #ISSET : isset ( ) Determina si una variable está definida y no es NULL 
 
+            #ISSET : isset ( ) Determina si una variable está definida y no es NULL 
             #LISTA BLANCA DE URL
 
             if (isset($_GET["pagina"])) {
