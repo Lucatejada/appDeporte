@@ -3,9 +3,6 @@
     <meta charset="utf-8">
     <link href="../../css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
 </head>
 
 <body>
@@ -45,19 +42,15 @@
                             <br>
 
 
-                            <div class="input1">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Default radio
-                                </label>
+                            <div>
+                                <label class="form-check-label" for="flexCheckIndeterminateDisabled">
+                                   asdasdasdasda </label>
+                                <input  type="radio" value="60" id="flexCheckIndeterminateDisabled" >
+                                <input  type="radio" value="60" id="flexCheckIndeterminateDisabled" 
+                                >
+                                    
                             </div>
-                            <div class="input1">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Default checked radio
-                                </label>
-                            </div>
-
+                            
 
                             <br><button class="btn" type="submit">Inscribite</button>
                         </form>

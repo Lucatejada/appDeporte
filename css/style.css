@@ -289,36 +289,16 @@ p.account a:hover {
     outline: none;
     margin-bottom: 15px;
     font-size: 16px;
-    color: #999;
+    /* color: #999; */
     text-align: left;
-    padding: 14px 20px;
-    width: 100%;
+    padding: 14px 15px;
+    width: flex;
     display: inline-block;
     box-sizing: border-box;
     border: none;
     outline: none;
-    background: #f7fafc;
-    border: 1px solid #e5e5e5;
-    transition: .3s ease;
-    -webkit-transition: .3s ease;
-    -moz-transition: .3s ease;
-    -ms-transition: .3s ease;
-    -o-transition: .3s ease;
-}
-.w3l-hotair-form .input1{
-    outline: none;
-    margin-bottom: 15px;
-    font-size: 16px;
-    color: #999;
-    /* text-align: left; */
-    /* padding: 14px 20px; */
-    /* width: 100%; */
-    display: inline-block;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    background: #f7fafc;
-    border: 1px solid #e5e5e5;
+    /* background: #f7fafc; */
+    /* border: 1px solid #e5e5e5; */
     transition: .3s ease;
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
