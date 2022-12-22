@@ -6,10 +6,13 @@ class controladorRegistro
     {
         require_once("modelos/modelo.actividades.php");
         require_once("modelos/modelo.distrito.php");
+        require_once("modelos/modelo.usuario.php");
         $mdlActividades = new mdlActividades();
         $listaActividades = $mdlActividades->mostrarActividades();
         $mdlDistritos = new mdlDistrito();
         $listaDistritos = $mdlDistritos->mostrarDistrito();
+        $mdlRoles = new mdlUsuario();
+        $listaRoles = $mdlRoles->rolesUsuarioM();
         require_once("vistas/plantilla.php");
         require_once("vistas/paginas/registro.php");
     }
@@ -23,9 +26,13 @@ class controladorRegistro
         $cuil = $_POST['cuil'];
         $telefono = $_POST['telefono'];
         $actividades = $_POST['actividades'];
+        $distritos = $_POST['distritos'];
+        $roles = $_POST['roles'];
+
+
 
         $mdlUsuario = new mdlUsuario();
-        if ($mdlUsuario->registrarUsuarioM($cuil, $nombre, $apellido, $telefono)) {
+        if ($mdlUsuario->registrarUsuarioM($cuil, $nombre, $apellido, $telefono,  $actividades, $distritos, $roles)) {
             $_SESSION['usuarioRegistrado'] = true;
             header("Location: ../index.php?pagina=ingreso");
         } else {

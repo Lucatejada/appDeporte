@@ -59,26 +59,29 @@ if (isset($_SESSION['ingreso'])) {
                                 <tr>
                                     <th scope="col">Cuil</th>
                                     <th scope="col">Nombre completo</th>
-                                    
-
-
+                                    <th scope="col">Actividad</th>
+                                    <th scope="col">Distrito</th>
+                                    <th scope="col">Roles</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-
                                 foreach ($listaAsistencia as $asistencia) {
                                 ?>
                                     <tr>
                                         <td> <?= $asistencia["cuil"] ?></td>
                                         <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
+                                        <td><?= $asistencia["nombre_actividad"] ?></td>
+                                        <td><?= $asistencia["nombre_distrito"] ?></td>
+                                        <td><?= $asistencia["nombre_roles"] ?></td>
                                     </tr>
                                 <?php
                                 }
-
                                 ?>
 
+
                             </tbody>
+
                         </table><br><br>
                         <a class="btn btn-primary" href="index.php?pagina=ingreso"> Regresar</a>
                     </div>

@@ -9,13 +9,13 @@ error_reporting(0);
         <div class="workinghny-form-grid ">
             <div class="main-hotair">
                 <div class="content-wthree">
-                    <h2> Pre-Inscripcion </h2>
+                    <h2> Agregar usuario al sistema </h2>
 
                     <?php
                     if ($_SESSION['cuilRepetido'] == true) {
                     ?>
                         <div class="alert alert-danger text-center" role="alert">
-                            Usuario registrado <br>
+                            Usuario repetido <br>
                             por favor inicie sesion.
                         </div>
                     <?php
@@ -26,11 +26,11 @@ error_reporting(0);
                     <form action="vistas/inicio.php?c=controladorRegistro&a=registrarUsuario" method="post" autocomplete="off">
                         <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
                         <input type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
-                        <input type="text" placeholder="Ingrese su cuil sin guiones ni puntos" name="cuil" required="" autofocus>
+                        <input type="text" placeholder="Ingrese su DNI sin guiones ni puntos" name="cuil" required="" autofocus>
                         <input type="text" placeholder="Ingrese su telefono" name="telefono" required="" autofocus>
                         <!-- <input type="text" placeholder="Ingrese el distrito al que pertenece" name="domicilio" required="" autofocus> -->
 
-                        <select aria-label="Default select example" name="actividades" require="">
+                        <select aria-label="Default select example" name="actividades" required>
                             <option selected>Seleccione la actividad</option>
                             <?php
                             foreach ($listaActividades as $actividades) {
@@ -41,7 +41,7 @@ error_reporting(0);
                             ?>
                         </select> <br>
 
-                        <select aria-label="Default select example" name="distritos" require="">
+                        <select aria-label="Default select example" name="distritos" required="">
                             <option selected>Seleccione su distrito</option>
                             <?php
                             foreach ($listaDistritos as $distritos) {
@@ -51,6 +51,20 @@ error_reporting(0);
                             }
                             ?>
                         </select> <br>
+
+                        <!-- Roles -->
+
+                        <select aria-label="Default select example" name="roles" required="">
+                            <option selected>Seleccione el rol</option>
+                            <?php
+                            foreach ($listaRoles as $roles) {
+                            ?>
+                                <option value="<?= $roles['id'] ?>"> <?= $roles['nombre'] ?></option>
+                            <?php
+                            }
+                            ?>
+                        </select> <br>
+
 
 
                         <button class="btn" type="submit">Inscribite</button>

@@ -78,11 +78,11 @@ p {
 }
 
 p {
-    color: #666;
+    /* color: #666; */
     font-size: 16px;
     line-height: 25px;
-    opacity: .6;
-    text-align: center;
+    /* opacity: .6; */
+    /* text-align: center; */
 }
 
 .p-relative {
@@ -103,9 +103,10 @@ p {
 
 .btn,
 button,
-.actionbg,
-input,
-select {
+.actionbg
+/* input, */
+/* select  */
+{
     border-radius: 36px;
     -webkit-border-radius: 36px;
     -moz-border-radius: 36px;
@@ -238,11 +239,17 @@ button:hover {
 
 .w3l-hotair-form .main-hotair {
     position: relative;
-    /* display: -webkit-box;
+    display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex; */
+    display: flex;
+    margin: 40px 40px;
+}
+
+.w3l-hotair-form .main-hotair1 {
+    position: relative;
+    
     margin: 40px 40px;
 }
 
@@ -273,12 +280,12 @@ p.account a:hover {
     text-align: center;
     font-size: 40px;
     font-weight: 700;
-    /* color: #fff; */
+    color: #fff;
 }
 
 .w3l-hotair-form h2{
-    /* font-size: 30px;
-    line-height: 40px; */
+    font-size: 30px;
+    line-height: 40px;
     margin-bottom: 5px;
     font-weight: 900;
     color: #272346;
@@ -289,16 +296,37 @@ p.account a:hover {
     outline: none;
     margin-bottom: 15px;
     font-size: 16px;
-    /* color: #999; */
+    color: #999;
     text-align: left;
-    padding: 14px 15px;
+    padding: 14px 20px;
     width: flex;
     display: inline-block;
     box-sizing: border-box;
     border: none;
     outline: none;
-    /* background: #f7fafc; */
-    /* border: 1px solid #e5e5e5; */
+    background: #f7fafc;
+    border: 1px solid #e5e5e5;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+}
+
+.w3l-hotair-form input1{
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #999;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f7fafc;
+    border: 1px solid #e5e5e5;
     transition: .3s ease;
     -webkit-transition: .3s ease;
     -moz-transition: .3s ease;
@@ -315,6 +343,7 @@ p.account a:hover {
     width: 100%;
     display: inline-block;
     box-sizing: border-box;
+    border: none;
     outline: none;
     background: #f7fafc;
     border: 1px solid #e5e5e5;
@@ -325,10 +354,10 @@ p.account a:hover {
     -o-transition: .3s ease;
 }
 
-.w3l-hotair-form input:focus {
+/* .w3l-hotair-form input:focus {
     background:transparent;
     border: 1px solid #0568C1;
-}
+} */
 .w3l-hotair-form button {
     font-size: 18px;
     color: #fff;

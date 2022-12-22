@@ -2,6 +2,7 @@
 require_once('conexion.php');
 class mdlActividades extends Conexion
 {
+   
 
     public function mostrarActividades()
     {
@@ -10,4 +11,5 @@ class mdlActividades extends Conexion
         $listaActividades = $resultado->fetch_all(MYSQLI_ASSOC);
         return $listaActividades;
     }
+    
 }
