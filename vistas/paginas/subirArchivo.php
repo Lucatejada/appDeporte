@@ -35,10 +35,18 @@ if($uno == "si"){
 }
 
 if($dos == "si"){
-    $respuesta1 = "si"; 
+    $respuesta2 = "si"; 
 } else {
-    $respuesta1 = "no"; 
+    $respuesta2 = "no"; 
 }
+
+if($tres == "si"){
+    $respuesta3 = "si"; 
+} else {
+    $respuesta3 = "no"; 
+}
+
+
 
 
 foreach ($cinco as $respuesta) {
