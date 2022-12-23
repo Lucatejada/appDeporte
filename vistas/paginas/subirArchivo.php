@@ -34,6 +34,13 @@ if($uno == "si"){
     $respuesta1 = "no"; 
 }
 
+if($dos == "si"){
+    $respuesta1 = "si"; 
+} else {
+    $respuesta1 = "no"; 
+}
+
+
 foreach ($cinco as $respuesta) {
     $respuesta5 .= $respuesta.", "; 
 }
