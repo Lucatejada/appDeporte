@@ -131,6 +131,7 @@
                     $_GET["pagina"] == "ingreso" ||
                     $_GET["pagina"] == "principal" ||
                     $_GET["pagina"] == "salud" ||
+                    $_GET["pagina"] == "subirArchivo" ||
                     $_GET["pagina"] == "salir"
                 ) {
 

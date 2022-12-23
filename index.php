@@ -11,37 +11,30 @@ saltará un error " PHP Fatal error " y el programa PHP se detendrá .
 once , se impide la carga de un mismo archivo más de una vez .
 */
 
-if(isset($_GET['pagina'])){
-switch ($_GET['pagina']) {
-    case 'registro':
-        require_once('controladores/controladorRegistro.php');
-        controladorRegistro::mostrarPaginaRegistro();
-        break;
-    case 'ingreso':
-        require_once('controladores/controlador.ingreso.php');
-        ctrIngreso::mostrarPaginaIngreso();
-        break;
-    case 'principal':
-        require_once('controladores/controlador.asistencia.php');
-        controladorUsuario::ctrAsistencia();
-        break;
-    case 'salud':
-        require_once('vistas/paginas/salud.php');
-        break;
-    case 'salir':
-        require_once('vistas/paginas/salir.php');
-        break;
-    
-}
+if (isset($_GET['pagina'])) {
+    switch ($_GET['pagina']) {
+        case 'registro':
+            require_once('controladores/controladorRegistro.php');
+            controladorRegistro::mostrarPaginaRegistro();
+            break;
+        case 'ingreso':
+            require_once('controladores/controlador.ingreso.php');
+            ctrIngreso::mostrarPaginaIngreso();
+            break;
+        case 'principal':
+            require_once('controladores/controlador.asistencia.php');
+            controladorUsuario::ctrAsistencia();
+            break;
+        case 'salud':
+            require_once('vistas/paginas/salud.php');
+            break;
+        case 'salir':
+            require_once('vistas/paginas/salir.php');
+            break;
+        case 'subirArchivo':
+            require_once('vistas/paginas/subirArchivo.php');
+            break;
+    }
 } else {
     header("Location:index.php?pagina=registro");
 }
-
-
-
-
-?>
-
-</body>
-
-</html>
