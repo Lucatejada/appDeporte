@@ -17,7 +17,7 @@
                                 ACTIVIDADES DEPORTIVAS <br>
                                 AÑO 2023 </h3>
 
-                            <form action="vistas/paginas/subirArchivo.php" method="post" autocomplete="off">
+                            <form action="vistas/inicio.php?c=controladorArchivo&a=ctrRespuestas" method="post" autocomplete="off">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su nombre" name="nombre">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su apellido" name="apellido">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su DNI (solo numeros)" name="cuil">
@@ -43,154 +43,154 @@
 
                                 <div>
                                     <p class="fs-5">01. ¿Tuvo enfermedades dentro de los 60 días anteriores al comienzo de clases?</p>
-                                    <input class="form-check-input" type="radio" name="1" value="si">
+                                    <input class="form-check-input" type="radio" name="uno" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="1" value="no">
+                                    <input class="form-check-input" type="radio" name="uno" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
                                 </div>
                                 <div>
                                     <p class="fs-5">02. ¿Sufre algun problema cardiovascular?</p>
-                                    <input class="form-check-input" type="radio" name="2" value="si">
+                                    <input class="form-check-input" type="radio" name="dos" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="2" value="no">
+                                    <input class="form-check-input" type="radio" name="dos" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
 
                                 </div>
                                 <div>
                                     <p class="fs-5">03. ¿Sufre algun problema respiratorio?</p>
-                                    <input class="form-check-input" type="radio" name="3" value="si">
+                                    <input class="form-check-input" type="radio" name="tres" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="3" value="no">
+                                    <input class="form-check-input" type="radio" name="tres" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
 
                                 </div>
                                 <div>
                                     <p class="fs-5">04. ¿Sufre de alergia?</p>
-                                    <input class="form-check-input" type="radio" name="4" value="si">
+                                    <input class="form-check-input" type="radio" name="cuatro" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="4" value="no">
+                                    <input class="form-check-input" type="radio" name="cuatro" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
 
                                 </div>
                                 <div>
                                     <p class="fs-5">05. ¿Que enfermades ha sufrido?</p>
-                                    <input class="form-check-input" type="checkbox" name="5[]" value="sarampion">
+                                    <input class="form-check-input" type="checkbox" name="cinco[]" value="sarampion">
                                     <label class="form-check-label" for="inlineRadio1">Sarampion</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="5[]" value="varicela">
+                                    <input class="form-check-input" type="checkbox" name="cinco[]" value="varicela">
                                     <label class="form-check-label" for="inlineRadio2">Varicela</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="5[]" value="rubeola">
+                                    <input class="form-check-input" type="checkbox" name="cinco[]" value="rubeola">
                                     <label class="form-check-label" for="inlineRadio2">Rubéola</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="5[]" value="paperas">
+                                    <input class="form-check-input" type="checkbox" name="cinco[]" value="paperas">
                                     <label class="form-check-label" for="inlineRadio2">Paperas</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="5[]" value="hepatitis">
+                                    <input class="form-check-input" type="checkbox" name="cinco[]" value="hepatitis">
                                     <label class="form-check-label" for="inlineRadio2">Hepatitis</label> <br>
-                                    <input style="width: 100%;" type="text" placeholder="Otra..." name="motivo5">
+                                    <input style="width: 100%;" type="text" placeholder="Otra..." name="motivocinco[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">06. ¿Tuvo operaciones?</p>
-                                    <input class="form-check-input" type="radio" name="6" value="si">
+                                    <input class="form-check-input" type="radio" name="seis[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="6" value="no">
+                                    <input class="form-check-input" type="radio" name="seis[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
-                                    <input style="width: 100%;" type="text" placeholder="¿De que tipo?" name="6">
+                                    <input style="width: 100%;" type="text" placeholder="¿De que tipo?" name="motivoseis[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">07. ¿Tuvo fracturas? </p>
-                                    <input class="form-check-input" type="radio" name="7" value="si">
+                                    <input class="form-check-input" type="radio" name="siete[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="7" value="no">
+                                    <input class="form-check-input" type="radio" name="siete[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
-                                    <input style="width: 100%;" type="text" placeholder="¿Cuales?" name="7">
+                                    <input style="width: 100%;" type="text" placeholder="¿Cuales?" name="motivosiete[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">08. ¿Tiene problemas en la columna vertebral?</p>
-                                    <input class="form-check-input" type="radio" name="8" value="si">
+                                    <input class="form-check-input" type="radio" name="ocho[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="8" value="no">
+                                    <input class="form-check-input" type="radio" name="ocho[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label> <br>
-                                    <input class="form-check-input" type="checkbox" name=8" value="escoliosis">
+                                    <input class="form-check-input" type="checkbox" name=ocho[]" value="escoliosis">
                                     <label class="form-check-label" for="inlineRadio1">Escoliosis</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="8" value="cifosis">
+                                    <input class="form-check-input" type="checkbox" name="ocho[]" value="cifosis">
                                     <label class="form-check-label" for="inlineRadio1">Cifosis</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="8" value="lordosis">
+                                    <input class="form-check-input" type="checkbox" name="ocho[]" value="lordosis">
                                     <label class="form-check-label" for="inlineRadio2">Lordosis</label> <br>
-                                    <input style="width: 100%;" type="text" placeholder="Otra..." name="8">
-                                    <input style="width: 100%;" type="text" placeholder="Desconoce" name="8">
+                                    <input style="width: 100%;" type="text" placeholder="Otra..." name="ocho[]">
+                                    <input style="width: 100%;" type="text" placeholder="Desconoce" name="ocho[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">09. ¿Tiene problemas de visión?</p>
-                                    <input class="form-check-input" type="radio" name="9" value="si">
+                                    <input class="form-check-input" type="radio" name="nueve[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="9" value="no">
+                                    <input class="form-check-input" type="radio" name="nueve[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
-                                    <input style="width: 100%;" type="text" placeholder="¿De que tipo?" name="9">
+                                    <input style="width: 100%;" type="text" placeholder="¿De que tipo?" name="motivonueve[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">10. ¿Tiene problemas endocrinos?</p>
-                                    <input class="form-check-input" type="radio" name="10" value="si">
+                                    <input class="form-check-input" type="radio" name="diez[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="10" value="no">
+                                    <input class="form-check-input" type="radio" name="diez[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="10" value="diabetes">
+                                    <input class="form-check-input" type="checkbox" name="diez[]" value="diabetes">
                                     <label class="form-check-label" for="inlineRadio1">Diabetes</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="10" value="hipotiroidismo">
+                                    <input class="form-check-input" type="checkbox" name="diez[]" value="hipotiroidismo">
                                     <label class="form-check-label" for="inlineRadio2">Hipotiroidismo</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="10" value="hipertiroidismo">
+                                    <input class="form-check-input" type="checkbox" name="diez[]" value="hipertiroidismo">
                                     <label class="form-check-label" for="inlineRadio2">Hipertiroidismo</label> <br>
-                                    <input style="width: 100%;" type="text" placeholder="Otros." name="10">
+                                    <input style="width: 100%;" type="text" placeholder="Otros." name="motivodiez[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">11. ¿Tiene problemas del sistema nervioso?</p>
-                                    <input class="form-check-input" type="radio" name="11" value="si">
+                                    <input class="form-check-input" type="radio" name="once[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="11" value="no">
+                                    <input class="form-check-input" type="radio" name="once[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="11" value="convulsiones">
+                                    <input class="form-check-input" type="checkbox" name="once[]" value="convulsiones">
                                     <label class="form-check-label" for="inlineRadio1">Convulsiones</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="11" value="epilepsia">
+                                    <input class="form-check-input" type="checkbox" name="once[]" value="epilepsia">
                                     <label class="form-check-label" for="inlineRadio2"></label>Epilepsia <br>
-                                    <input class="form-check-input" type="checkbox" name="11" value="hiperactividad">
+                                    <input class="form-check-input" type="checkbox" name="once[]" value="hiperactividad">
                                     <label class="form-check-label" for="inlineRadio2">Hiperactividad</label> <br>
-                                    <input class="form-check-input" type="checkbox" name="11" value="Perdida del conocimiento">
+                                    <input class="form-check-input" type="checkbox" name="once[]" value="Perdida del conocimiento">
                                     <label class="form-check-label" for="inlineRadio2">Perdida del conocimiento</label> <br>
                                 </div>
-                                <div>
+                                <!-- <div>
                                     <p class="fs-5">12. ¿Se encuentra bajo algun tratamiento?</p>
-                                    <input class="form-check-input" type="radio" name=12" value="si">
+                                    <input class="form-check-input" type="radio" name="12[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="12" value="no">
+                                    <input class="form-check-input" type="radio" name="12[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
-                                    <input style="width: 100%;" type="text" placeholder="¿De que tipo?" name="12">
-                                    <p class="fs-5">12. ¿Tiene estudios medicos al respecto?</p>
-                                    <input class="form-check-input" type="radio" name=12" value="si">
+                                    <input style="width: 100%;" type="text" placeholder="¿De que tipo?" name="12[]">
+                                    <p class="fs-5">¿Tiene estudios medicos al respecto?</p>
+                                    <input class="form-check-input" type="checkbox" name="12[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="12" value="no">
+                                    <input class="form-check-input" type="checkbox" name="12[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
-                                    <input style="width: 100%;" type="text" placeholder="¿Cuales?" name="12">
-                                </div>
+                                    <input style="width: 100%;" type="text" placeholder="¿Cuales?" name="12[]">
+                                </div> -->
                                 <div>
                                     <p class="fs-5">13. ¿Posee alguna limitacion para hacer actividad fisica?</p>
-                                    <input class="form-check-input" type="radio" name="13" value="si">
+                                    <input class="form-check-input" type="radio" name="trece[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
-                                    <input class="form-check-input" type="radio" name="13" value="no">
+                                    <input class="form-check-input" type="radio" name="trece[]" value="no">
                                     <label class="form-check-label" for="checkbox">NO</label>
-                                    <input style="width: 100%;" type="text" placeholder="¿Cual?" name="11">
+                                    <input style="width: 100%;" type="text" placeholder="¿Cual?" name="trece[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">14. ¿En la actualidad vive con: ?</p>
-                                    <input class="form-check-input" type="checkbox" name="14" value="si">
+                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">Padre</label><br>
-                                    <input class="form-check-input" type="checkbox" name="14" value="no">
+                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="no">
                                     <label class="form-check-label" for="inlineRadio1">Madre</label><br>
-                                    <input class="form-check-input" type="checkbox" name="14" value="hermanos">
+                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="hermanos">
                                     <label class="form-check-label" for="inlineRadio1">Hermanos</label><br>
-                                    <input class="form-check-input" type="checkbox" name="14" value="abuelos">
+                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="abuelos">
                                     <label class="form-check-label" for="inlineRadio1">Abuelos</label><br>
-                                    <input style="width: 100%;" type="text" placeholder="Otros" name="14">
+                                    <input style="width: 100%;" type="text" placeholder="Otros" name="catorce[]">
                                 </div>
                                 <div>
                                     <p class="fs-5">15. Si tiene alguna sugerencia hágala saber:
-                                        <input type="text" placeholder="(opcional)" name="15">
+                                        <input type="text" placeholder="(opcional)" name="quince">
                                 </div>
 
 
