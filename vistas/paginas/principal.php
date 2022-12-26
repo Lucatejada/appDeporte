@@ -47,7 +47,7 @@ if (isset($_SESSION['ingreso'])) {
 
     <body>
 
-        <div style="height:50px"></div>
+        
 
         <!--Ejemplo tabla con DataTables-->
         <div class="container">
