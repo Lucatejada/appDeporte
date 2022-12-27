@@ -17,24 +17,12 @@
                                 ACTIVIDADES DEPORTIVAS <br>
                                 AÑO 2023 </h3>
 
-                            <form action="vistas/inicio.php?c=controladorArchivo&a=ctrRespuestas" method="post" autocomplete="off">
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su nombre" name="nombre">
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su apellido" name="apellido">
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su DNI (solo numeros)" name="cuil">
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su telefono" name="telefono">
-
-
-                                <select name="sangre">
-                                    <option selected>Seleccione su grupo sanguineo</option>
-                                    <?php
-                                    foreach ($listaActividades as $actividades) {
-                                    ?>
-                                        <option value="<?= $actividades['actividad_id'] ?>"> <?= $actividades['nombre'] ?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select> <br>
-
+                            <form action="vistas/inicio.php?c=controladorArchivo&a=ctrRespuestas" method="post" autocomplete="off" require="">
+                                <input style="width: 49%;" type="text" placeholder="Ingrese su nombre" name="nombre" require="">
+                                <input style="width: 50%;" type="text" placeholder="Ingrese su apellido" name="apellido" require="">
+                                <input style="width: 100%;" type="text" placeholder="Ingrese su DNI (solo numeros)" name="cuil" require="">
+                                <input style="width: 100%;" type="text" placeholder="Ingrese su telefono" name="telefono" require="">
+                                <input style="width: 100%;" type="text" placeholder="Ingrese su tipo de sangre" name="sangre"> <br>
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su peso en kg" name="peso">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su talle en cm" name="talle">
                                 <br>
@@ -178,9 +166,9 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">14. ¿En la actualidad vive con: ?</p>
-                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="si">
+                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="padre">
                                     <label class="form-check-label" for="inlineRadio1">Padre</label><br>
-                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="no">
+                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="madre">
                                     <label class="form-check-label" for="inlineRadio1">Madre</label><br>
                                     <input class="form-check-input" type="checkbox" name="catorce[]" value="hermanos">
                                     <label class="form-check-label" for="inlineRadio1">Hermanos</label><br>

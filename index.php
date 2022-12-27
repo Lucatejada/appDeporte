@@ -26,15 +26,22 @@ if (isset($_GET['pagina'])) {
             controladorUsuario::ctrAsistencia();
             break;
         case 'salud':
+            // require_once('vistas/plantilla.php');
             require_once('vistas/paginas/salud.php');
             break;
         case 'salir':
+            require_once('vistas/plantilla.php');
             require_once('vistas/paginas/salir.php');
             break;
         case 'subirArchivo':
+            require_once('vistas/plantilla.php');
             require_once('vistas/paginas/subirArchivo.php');
+            break;
+        case 'verArchivos':
+            require_once('controladores/controlador.actividades.php');
+            ctrActividades::mostrarRtas();
             break;
     }
 } else {
-    header("Location:index.php?pagina=registro");
+    header("Location:index.php?pagina=ingreso");
 }

@@ -17,11 +17,21 @@ class mdlRespuestas extends Conexion
             $resultado = $this->conexion->query($sql);
             if ($resultado) {
                 return true;
+                $_SESSION['formEnviado'];
             } else {
                 return false;
+                $_SESSION['formError'];
             }
         } catch (Exception $e) {
             return false;
         }
+    }
+
+    public function mostrarRespuestas()
+    {
+        $sql = "SELECT nombre, apellido, cuil, telefono, sangre, peso, talle, nombre_tutor, telEmergencia FROM resultado";
+        $resultado = $this->conexion->query($sql);
+        $listaRespuestas = $resultado->fetch_all(MYSQLI_ASSOC);
+        return $listaRespuestas;
     }
 }

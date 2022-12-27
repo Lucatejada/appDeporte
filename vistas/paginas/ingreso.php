@@ -56,7 +56,7 @@ session_start();
                         <button class="btn" type="submit">Ingresar</button>
                     </form>
 
-                    <p class="account">¿No tienes una cuenta? <a href="index.php?pagina=registro">Registrate</a></p>
+                 <!-- <p class="account">¿No tienes una cuenta? <a href="index.php?pagina=registro">Registrate</a></p> -->
                 </div>
                 <div class="w3l_form align-self">
                     <div class="left_grid_info">
