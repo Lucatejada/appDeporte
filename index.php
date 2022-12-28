@@ -25,9 +25,9 @@ if (isset($_GET['pagina'])) {
             require_once('controladores/controlador.asistencia.php');
             controladorUsuario::ctrAsistencia();
             break;
-        case 'salud':
+        case 'formulario':
             // require_once('vistas/plantilla.php');
-            require_once('vistas/paginas/salud.php');
+            require_once('vistas/paginas/formulario.php');
             break;
         case 'salir':
             require_once('vistas/plantilla.php');
@@ -41,6 +41,10 @@ if (isset($_GET['pagina'])) {
             require_once('controladores/controlador.actividades.php');
             ctrActividades::mostrarRtas();
             break;
+    //     case 'datos.completos':
+    //         require_once('controladores/controlador.actividades.php');
+    //         ctrActividades::mostrarRtas2();
+    //         break;
     }
 } else {
     header("Location:index.php?pagina=ingreso");

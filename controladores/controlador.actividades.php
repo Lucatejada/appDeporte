@@ -23,4 +23,14 @@ class ctrActividades
         require_once("vistas/plantilla.php");
         require_once("vistas/paginas/verArchivos.php");
     }
+
+//     public static function mostrarRtas2()
+//     {
+//         require_once("modelos/modelo.respuestas.php");
+//         $mdlRespuestas = new mdlRespuestas();
+//         $listaRespuestas2 = $mdlRespuestas->mostrarRespuestas2();
+//         require_once("vistas/plantilla.php");
+//         require_once("vistas/paginas/datos.completos.php");
+//     }
+// }
 }

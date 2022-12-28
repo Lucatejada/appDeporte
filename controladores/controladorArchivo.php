@@ -36,27 +36,27 @@ class controladorArchivo
 
 
         if ($uno == "si") {
-            $respuesta1 = "si";
+            $respuesta1 = "si ";
         } else {
-            $respuesta1 = "no";
+            $respuesta1 = "no ";
         }
 
         if ($dos == "si") {
-            $respuesta2 = "si";
+            $respuesta2 = "si ";
         } else {
-            $respuesta2 = "no";
+            $respuesta2 = "no ";
         }
 
         if ($tres == "si") {
-            $respuesta3 = "si";
+            $respuesta3 = "si ";
         } else {
-            $respuesta3 = "no";
+            $respuesta3 = "no ";
         }
 
         if ($cuatro == "si") {
-            $respuesta4 = "si";
+            $respuesta4 = "si ";
         } else {
-            $respuesta4 = "no";
+            $respuesta4 = "no ";
         }
 
         $respuesta5="";
@@ -72,34 +72,34 @@ class controladorArchivo
 
 
         foreach ($cinco as $respuesta) {
-            $respuesta5 .= $respuesta . "- ";
+            $respuesta5 .= $respuesta . " - ";
         }
         foreach ($seis as $respuesta) {
-            $respuesta6 .= $respuesta . "- ";
+            $respuesta6 .= $respuesta . " - ";
         }
         foreach ($siete as $respuesta) {
-            $respuesta7 .= $respuesta . "- ";
+            $respuesta7 .= $respuesta . " - ";
         }
         foreach ($ocho as $respuesta) {
-            $respuesta8 .= $respuesta . "- ";
+            $respuesta8 .= $respuesta . " - ";
         }
         foreach ($nueve as $respuesta) {
-            $respuesta9 .= $respuesta . "- ";
+            $respuesta9 .= $respuesta . " - ";
         }
         foreach ($diez as $respuesta) {
-            $respuesta10 .= $respuesta . "- ";
+            $respuesta10 .= $respuesta . " - ";
         }
         foreach ($once as $respuesta) {
-            $respuesta11 .= $respuesta . "-  ";
+            $respuesta11 .= $respuesta . " -  ";
         }
         // foreach ($doce as $respuesta) {
         //     $respuesta .= $respuesta . ", ";
         // }
         foreach ($trece as $respuesta) {
-            $respuesta13 .= $respuesta . "- ";
+            $respuesta13 .= $respuesta . " - ";
         }
         foreach ($catorce as $respuesta) {
-            $respuesta14 .= $respuesta . "- ";
+            $respuesta14 .= $respuesta . "  - ";
         }
 
 

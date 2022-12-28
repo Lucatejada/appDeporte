@@ -3,9 +3,13 @@
     <meta charset="utf-8">
     <link href="../../css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Declaracion jurada</title>
+
 </head>
 
 <body>
+
+
     <section class="w3l-hotair-form" style="background-color: #e3f2fd;">
         <div class="container">
             <div class="workinghny-form-grid ">

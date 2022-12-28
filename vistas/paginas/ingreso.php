@@ -1,8 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_WARNING);
 session_start();
-
-
 ?>
 
 <!-- form section start -->
@@ -49,10 +47,10 @@ session_start();
                     }
                     ?>
 
-                    <form action="controladores/controlador.login.php" method="post" autocomplete="off">
-                        <input type="text" placeholder="Ingrese su cuil" name="cuil" required="" autofocus>
-                        <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
-                        <input type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
+                    <form action="controladores/controlador.login.php" method="post" autocomplete="off" autofocus>
+                        <input style="width: 100%" type="text" placeholder="Ingrese su nombre" name="nombre" required="">
+                        <input style="width: 100%" type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
+                        <input style="width: 100%" type="text" placeholder="Ingrese su cuil" name="cuil" required="" autofocus>
                         <button class="btn" type="submit">Ingresar</button>
                     </form>
 
@@ -65,13 +63,7 @@ session_start();
                 </div>
             </div>
         </div>
-
     </div>
 
 </section>
-<?php
 
-
-
-
-?>

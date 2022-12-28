@@ -49,7 +49,7 @@
                                         <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.php?pagina=salud">Formulario</a>
+                                        <a class="nav-link" href="index.php?pagina=formulario">Formulario</a>
                                     </li>
                                 <?php endif  ?>
 
@@ -65,11 +65,11 @@
                                         <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="index.php?pagina=salud">Formulario</a>
+                                        <a class="nav-link" href="index.php?pagina=formulario">Formulario</a>
                                     </li>
 
                                 <?php endif  ?>
-                                <?php if ($_GET["pagina"] == "salud") : ?>
+                                <?php if ($_GET["pagina"] == "formulario") : ?>
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="index.php?pagina=registro">Registro</a>
@@ -81,7 +81,7 @@
                                         <a class="nav-link" href="index.php?pagina=principal">Principal</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="index.php?pagina=salud">Formulario</a>
+                                        <a class="nav-link active" href="index.php?pagina=formulario">Formulario</a>
                                     </li>
                                 <?php endif  ?>
 
@@ -152,9 +152,10 @@
                     $_GET["pagina"] == "registro" ||
                     $_GET["pagina"] == "ingreso" ||
                     $_GET["pagina"] == "principal" ||
-                    $_GET["pagina"] == "salud" ||
+                    $_GET["pagina"] == "formulario" ||
                     $_GET["pagina"] == "subirArchivo" ||
                     $_GET["pagina"] == "verArchivos" ||
+                    $_GET["pagina"] == "datos.completos" ||
                     $_GET["pagina"] == "salir"
                 ) {
 

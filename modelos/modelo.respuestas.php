@@ -29,9 +29,11 @@ class mdlRespuestas extends Conexion
 
     public function mostrarRespuestas()
     {
-        $sql = "SELECT nombre, apellido, cuil, telefono, sangre, peso, talle, nombre_tutor, telEmergencia FROM resultado";
+        $sql = "SELECT nombre, apellido, cuil, telefono, sangre, peso, talle, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, once, doce, trece, catorce, quince, nombre_tutor, telEmergencia FROM resultado";
         $resultado = $this->conexion->query($sql);
         $listaRespuestas = $resultado->fetch_all(MYSQLI_ASSOC);
         return $listaRespuestas;
     }
+
+    
 }
