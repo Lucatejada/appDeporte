@@ -17,10 +17,8 @@ class mdlRespuestas extends Conexion
             $resultado = $this->conexion->query($sql);
             if ($resultado) {
                 return true;
-                $_SESSION['formEnviado'];
             } else {
                 return false;
-                $_SESSION['formError'];
             }
         } catch (Exception $e) {
             return false;

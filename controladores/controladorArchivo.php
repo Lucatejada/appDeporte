@@ -1,9 +1,9 @@
 
 <?php
+// session_start();
 class controladorArchivo
 {
-    // error_reporting(0);
-
+    
     public static function ctrRespuestas()
     {
         require_once("../modelos/modelo.respuestas.php");
@@ -59,16 +59,16 @@ class controladorArchivo
             $respuesta4 = "no ";
         }
 
-        $respuesta5="";
-        $respuesta6="";
-        $respuesta7="";
-        $respuesta8="";
-        $respuesta9="";
-        $respuesta10="";
-        $respuesta11="";
-        $respuesta12="";
-        $respuesta13="";
-        $respuesta14="";
+        $respuesta5 = "";
+        $respuesta6 = "";
+        $respuesta7 = "";
+        $respuesta8 = "";
+        $respuesta9 = "";
+        $respuesta10 = "";
+        $respuesta11 = "";
+        $respuesta12 = "";
+        $respuesta13 = "";
+        $respuesta14 = "";
 
 
         foreach ($cinco as $respuesta) {
@@ -125,9 +125,42 @@ class controladorArchivo
         // }
 
         $mdlRespuestas = new mdlRespuestas();
-        echo $mdlRespuestas->subirRespuestas($nombre, $apellido, $cuil, $telefono, $sangre, $peso, $talle, 
-        $respuesta1, $respuesta2, $respuesta3, $respuesta4, $respuesta5, $respuesta6, $respuesta7, $respuesta8, $respuesta9, $respuesta10, 
-        $respuesta11, $respuesta12, $respuesta13, $respuesta14, $quince, $nombre_tutor, $dni_tutor, $telEmergencia, $centro_asistencial);
+        if ($mdlRespuestas->subirRespuestas(
+            $nombre,
+            $apellido,
+            $cuil,
+            $telefono,
+            $sangre,
+            $peso,
+            $talle,
+            $respuesta1,
+            $respuesta2,
+            $respuesta3,
+            $respuesta4,
+            $respuesta5,
+            $respuesta6,
+            $respuesta7,
+            $respuesta8,
+            $respuesta9,
+            $respuesta10,
+            $respuesta11,
+            $respuesta12,
+            $respuesta13,
+            $respuesta14,
+            $quince,
+            $nombre_tutor,
+            $dni_tutor,
+            $telEmergencia,
+            $centro_asistencial
+        )) {
+            session_start();
+            $_SESSION['formEnviado'] = true;
+            header("Location: ../index.php?pagina=verArchivos");
+        } else {
+            session_start();
+            $_SESSION['formError'] = true;
+            header("Location: ../index.php?pagina=verArchivos");
+        }
     }
 }
 

@@ -2,7 +2,7 @@
 <?php
 session_start();
 session_destroy();
-header('location: ../index.php?pagina=ingreso');
+header('location: index.php?pagina=ingreso');
 
 ?>
 

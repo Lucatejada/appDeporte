@@ -24,10 +24,10 @@ error_reporting(0);
                     ?>
 
                     <form action="vistas/inicio.php?c=controladorRegistro&a=registrarUsuario" method="post" autocomplete="off">
-                        <input type="text" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
-                        <input type="text" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
-                        <input type="text" placeholder="Ingrese su DNI sin guiones ni puntos" name="cuil" required="" autofocus>
-                        <input type="text" placeholder="Ingrese su telefono" name="telefono" required="" autofocus>
+                        <input type="text" style="width: 100%" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
+                        <input type="text" style="width: 100%" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
+                        <input type="text" style="width: 100%" placeholder="Ingrese su DNI sin guiones ni puntos" name="cuil" required="" autofocus>
+                        <input type="text" style="width: 100%" placeholder="Ingrese su telefono" name="telefono" required="" autofocus>
                         <!-- <input type="text" placeholder="Ingrese el distrito al que pertenece" name="domicilio" required="" autofocus> -->
 
                         <select aria-label="Default select example" name="actividades" required>
@@ -73,7 +73,7 @@ error_reporting(0);
                 </div>
                 <div class="w3l_form align-self text-center">
                     <div class="left_grid_info">
-                        <img src="../../images/1.png" alt="" class="img-fluid">
+                        <img src="images/1.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>

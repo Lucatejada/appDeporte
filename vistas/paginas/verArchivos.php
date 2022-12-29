@@ -1,6 +1,7 @@
 <?php
 session_start();
-// if (isset($_SESSION['ingreso'])) {
+error_reporting(0);
+
 ?>
 <!doctype html>
 <html lang="es">
@@ -13,12 +14,12 @@ session_start();
     <title>Tabla de datos</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- CSS personalizado -->
-    <link rel="stylesheet" href="../../js/main.js">
+    <link rel="stylesheet" href="js/main.js">
 
     <!--datables CSS básico-->
-    <link rel="stylesheet" type="text/css" href="../../datatables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css" />
     <!--datables estilo bootstrap 4 CSS-->
     <!-- <link rel="stylesheet"  type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css"> -->
 
@@ -26,26 +27,49 @@ session_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <!-- jQuery, Popper.js, Bootstrap JS -->
-    <script src="../../jquery/jquery-3.3.1.min.js"></script>
-    <script src="../../popper/popper.min.js"></script>
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="jquery/jquery-3.3.1.min.js"></script>
+    <script src="popper/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <!-- datatables JS -->
-    <script type="text/javascript" src="../../datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="datatables/datatables.min.js"></script>
 
     <!-- para usar botones en datatables JS -->
-    <script src="../../datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>
-    <script src="../../datatables/JSZip-2.5.0/jszip.min.js"></script>
-    <script src="../../datatables/pdfmake-0.1.36/pdfmake.min.js"></script>
-    <script src="../../datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
-    <script src="../../datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+    <script src="datatables/Buttons-1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="datatables/JSZip-2.5.0/jszip.min.js"></script>
+    <script src="datatables/pdfmake-0.1.36/pdfmake.min.js"></script>
+    <script src="datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
+    <script src="datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
 
     <!-- código JS propìo-->
-    <script type="text/javascript" src="../../js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
 </head>
 
 <body>
+
+
+    <?php
+    if ($_SESSION['formEnviado'] == true) {
+    ?>
+        <div class="alert alert-success text-center" role="alert">
+            Formulario enviado con exito <br>
+        </div>
+    <?php
+        unset($_SESSION["formEnviado"]);
+    }
+    ?>
+
+    <?php
+    if ($_SESSION['formError'] == true) {
+    ?>
+        <div class="alert alert-danger text-center" role="alert">
+            Gorriado el dni esta repetido
+        </div>
+    <?php
+        unset($_SESSION["formError"]);
+    }
+    ?>
 
     <!--Ejemplo tabla con DataTables-->
     <div class="container">
@@ -82,10 +106,10 @@ session_start();
                                     <td><?= $asistencia["talle"] ?></td>
                                     <td><?= $asistencia["nombre_tutor"] ?></td>
                                     <td><?= $asistencia["telEmergencia"] ?></td>
-                                    
+
                                     <td>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMasInfo<?= $asistencia['cuil'] ?>">
-                                            Launch demo modal
+                                            Ver más
                                         </button>
                                     </td>
 
@@ -112,7 +136,7 @@ session_start();
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="" class="form-label">Problemas respiratorios</label>
-                                                    <input type="text" class="form-control" value="<?= $asistencia["tres"]?>" aria-describedby="helpId" placeholder="" disabled>
+                                                    <input type="text" class="form-control" value="<?= $asistencia["tres"] ?>" aria-describedby="helpId" placeholder="" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="" class="form-label">Alergias</label>
@@ -144,7 +168,7 @@ session_start();
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="" class="form-label">Problemas en el sistema nervioso</label>
-                                                    <input type="text" class="form-control" value="<?= $asistencia["once"]?>" aria-describedby="helpId" placeholder="" disabled>
+                                                    <input type="text" class="form-control" value="<?= $asistencia["once"] ?>" aria-describedby="helpId" placeholder="" disabled>
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="" class="form-label">Posee limitaciones para realizar actividad fisica</label>
@@ -156,7 +180,7 @@ session_start();
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="" class="form-label">Sugerencias</label>
-                                                    <input type="text" class="form-control" value=""<?= $asistencia["quince"] ?>" aria-describedby="helpId" placeholder="" disabled>
+                                                    <input type="text" class="form-control" value="" <?= $asistencia["quince"] ?>" aria-describedby="helpId" placeholder="" disabled>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
