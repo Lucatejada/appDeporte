@@ -252,10 +252,10 @@ button:hover {
     margin: 40px 40px;
 }
 
-.w3l-hotair-form form {
+/* .w3l-hotair-form form {
     margin-top: 30px;
     margin-bottom: 30px;
-}
+} */
 
 .social-icons {
     text-align: center;
@@ -312,7 +312,7 @@ p.account a:hover {
     -o-transition: .3s ease;
 }
 
-.w3l-hotair-form input1{
+/* .w3l-hotair-form input1{
     outline: none;
     margin-bottom: 15px;
     font-size: 16px;
@@ -331,7 +331,7 @@ p.account a:hover {
     -moz-transition: .3s ease;
     -ms-transition: .3s ease;
     -o-transition: .3s ease;
-}
+} */
 
 .w3l-hotair-form select{
     margin-bottom: 15px;

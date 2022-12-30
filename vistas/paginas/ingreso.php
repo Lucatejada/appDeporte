@@ -8,7 +8,7 @@ session_start();
     <div class="container">
         <!-- /form -->
         <div class="workinghny-form-grid">
-            <div class="main-hotair">
+            <div class="main-hotair1">
                 <div class="content-wthree">
                     <h2>Ingresar </h2>
 
@@ -56,11 +56,11 @@ session_start();
 
                  <!-- <p class="account">¿No tienes una cuenta? <a href="index.php?pagina=registro">Registrate</a></p> -->
                 </div>
-                <div class="w3l_form align-self">
+                <!-- <div class="w3l_form align-self">
                     <div class="left_grid_info">
                         <img src="images/1.png" alt="" class="img-fluid">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

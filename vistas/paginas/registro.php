@@ -7,7 +7,7 @@ error_reporting(0);
     <div class="container">
         <!-- /form -->
         <div class="workinghny-form-grid ">
-            <div class="main-hotair">
+            <div class="main-hotair1">
                 <div class="content-wthree">
                     <h2> Agregar usuario al sistema </h2>
 
@@ -23,7 +23,7 @@ error_reporting(0);
                     }
                     ?>
 
-                    <form action="vistas/inicio.php?c=controladorRegistro&a=registrarUsuario" method="post" autocomplete="off">
+                    <form class="align-items: center"action="vistas/inicio.php?c=controladorRegistro&a=registrarUsuario" method="post" autocomplete="off">
                         <input type="text" style="width: 100%" placeholder="Ingrese su nombre" name="nombre" required="" autofocus>
                         <input type="text" style="width: 100%" placeholder="Ingrese su apellido" name="apellido" required="" autofocus>
                         <input type="text" style="width: 100%" placeholder="Ingrese su DNI sin guiones ni puntos" name="cuil" required="" autofocus>
@@ -70,11 +70,8 @@ error_reporting(0);
                     </form>
 
                 </div>
-                <div class="w3l_form align-self text-center">
-                    <div class="left_grid_info">
-                        <img src="images/1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
+                
+                <!-- </div> -->
             </div>
         </div>
 
