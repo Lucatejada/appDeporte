@@ -39,8 +39,8 @@ session_start();
                     if ($_SESSION['datosMal'] == true) {
                     ?>
                         <div class="alert alert-danger text-center" role="alert">
-                            Te re cuesta <br>
-                            Ingrese nuevamente.
+                            Por favor
+                            intente nuevamente.
                         </div>
                     <?php
                         unset($_SESSION['datosMal']);

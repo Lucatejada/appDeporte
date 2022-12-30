@@ -41,10 +41,6 @@ if (isset($_GET['pagina'])) {
             require_once('controladores/controlador.actividades.php');
             ctrActividades::mostrarRtas();
             break;
-    //     case 'datos.completos':
-    //         require_once('controladores/controlador.actividades.php');
-    //         ctrActividades::mostrarRtas2();
-    //         break;
     }
 } else {
     header("Location:index.php?pagina=ingreso");

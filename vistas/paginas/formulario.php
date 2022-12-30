@@ -25,8 +25,8 @@
                             <form action="vistas/inicio.php?c=controladorArchivo&a=ctrRespuestas" method="post" >
                                 <input style="width: 49%;" type="text" placeholder="Ingrese su nombre" name="nombre" required="">
                                 <input style="width: 50%;" type="text" placeholder="Ingrese su apellido" name="apellido" required="">
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su DNI (solo numeros)" name="cuil" required="">
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su telefono" name="telefono" required="">
+                                <input style="width: 100%;" type="number" placeholder="Ingrese su DNI (solo numeros)" name="cuil" required="">
+                                <input style="width: 100%;" type="number" placeholder="Ingrese su telefono" name="telefono" required="">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su tipo de sangre" name="sangre" required=""> <br>
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su peso en kg" name="peso" required="">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su talle en cm" name="talle" required="">
@@ -188,7 +188,7 @@
 
 
                                 <p> El que se suscribe Padre, Madre o Tutor del alumno/a <input type="text" placeholder="" name="nombre_tutor" required=""> <br>
-                                    DNI <input type="text" name="dni_tutor" required=""> <br>
+                                    DNI <input type="number" name="dni_tutor" required=""> <br>
                                     AUTORIZO/A a mi hijo/a a que realice actividades fisicas de acuerdo a su edad, en compañia de los profesionales designados,
                                     que tendran a su cargo las responsabilidades emergentes en los textos legales vigentesd arts. 1749, 1751, 1755 y cctes de CC y CN,
                                     resoluciones 416/84, 154/87 y/o la responsabilidad estatal conforme la Ley n° 26.944 en caso de existir. <br>

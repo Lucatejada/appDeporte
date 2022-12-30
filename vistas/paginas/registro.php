@@ -66,7 +66,6 @@ error_reporting(0);
                         </select> <br>
 
 
-
                         <button class="btn" type="submit">Inscribite</button>
                     </form>
 

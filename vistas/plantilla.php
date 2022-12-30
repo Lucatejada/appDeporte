@@ -13,12 +13,10 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- PLUGGINS JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/0b4b023277.js" crossorigin="anonymous"></script>
+    
+
+      
+    
 
 
 
@@ -33,7 +31,7 @@
 
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Deporte</a>
+                    <a class="navbar-brand" href="index.php?pagina=ingreso">Deporte</a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <?php if (isset($_GET["pagina"])) : ?>
@@ -113,23 +111,18 @@
                                     </li>
                                 <?php endif  ?>
                             <?php else :
-                                header('location: ../index.php?pagina=registro');
+                                header('location: ../index.php?pagina=formulario');
                             ?>
                             <?php endif  ?>
                         </ul>
                         <form class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="No funciona :)" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <button class="btn btn-outline-success" type="submit" href=#>Search</button>
                         </form>
 
                     </div>
                 </div>
             </nav>
-
-
-
-
-
 
             </ul>
         </div>
@@ -164,7 +157,7 @@
                     include_once "paginas/error404.php";
                 }
             } else {
-                include_once "paginas/ingreso.php";
+                include_once "paginas/formulario.php";
             }
 
             ?>
