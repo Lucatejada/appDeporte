@@ -189,7 +189,7 @@ button:hover {
     grid-template-rows: 1fr auto 1fr;
     align-items: center;
 }
-.container {
+.container1 {
     max-width: 890px;
     margin: 0 auto;
     justify-content: center;

@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 if (isset($_SESSION['ingreso'])) {
 ?>
     <!doctype html>
@@ -38,46 +38,109 @@ if (isset($_SESSION['ingreso'])) {
 
 
 
-        <!--Ejemplo tabla con DataTables-->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="table-responsive">
-                        <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Cuil</th>
-                                    <th scope="col">Nombre completo</th>
-                                    <th scope="col">Actividad</th>
-                                    <th scope="col">Distrito</th>
-                                    <th scope="col">Roles</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                foreach ($listaAsistencia as $asistencia) {
-                                ?>
+        <?php
+        if ($_SESSION['rol'] == "admin") {
+        ?>
+
+            <!--Ejemplo tabla con DataTables-->
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
                                     <tr>
-                                        <td> <?= $asistencia["cuil"] ?></td>
-                                        <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
-                                        <td><?= $asistencia["nombre_actividad"] ?></td>
-                                        <td><?= $asistencia["nombre_distrito"] ?></td>
-                                        <td><?= $asistencia["nombre_roles"] ?></td>
+                                        <th scope="col">Cuil</th>
+                                        <th scope="col">Nombre completo</th>
+                                        <th scope="col">Actividad</th>
+                                        <th scope="col">Distrito</th>
+                                        <th scope="col">Roles</th>
+                                        <th scope="col">Acciones</th>
                                     </tr>
-                                <?php
-                                }
-                                ?>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    foreach ($listaAsistencia as $asistencia) {
+                                    ?>
+                                        <tr>
+                                            <td> <?= $asistencia["cuil"] ?></td>
+                                            <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
+                                            <td><?= $asistencia["nombre_actividad"] ?></td>
+                                            <td><?= $asistencia["nombre_distrito"] ?></td>
+                                            <td><?= $asistencia["nombre_roles"] ?></td>
+                                            <td><?= $asistencia["nombre_roles"] ?></td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
 
 
-                            </tbody>
+                                </tbody>
 
-                        </table><br><br>
-                        <a class="btn btn-primary" href="index.php?pagina=ingreso"> Regresar</a>
+                            </table><br><br>
+                            <a class="btn btn-primary" href="index.php?pagina=ingreso"> Regresar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
+            </div>
+        <?php
+        }
+        ?>
+
+
+
+
+        <!-- ------------------------------------------------ -->
+        <?php
+        if ($_SESSION['rol'] == "profesor") {
+        ?>
+
+            <!--Ejemplo tabla con DataTables-->
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Cuil</th>
+                                        <th scope="col">Nombre completo</th>
+                                        <th scope="col">Actividad</th>
+                                        <th scope="col">Distrito</th>
+                                        <th scope="col">Roles</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    foreach ($listaAsistencia as $asistencia) {
+                                    ?>
+                                        <tr>
+                                            <td> <?= $asistencia["cuil"] ?></td>
+                                            <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
+                                            <td><?= $asistencia["nombre_actividad"] ?></td>
+                                            <td><?= $asistencia["nombre_distrito"] ?></td>
+                                            <td><?= $asistencia["nombre_roles"] ?></td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
+
+
+                                </tbody>
+
+                            </table><br><br>
+                            <a class="btn btn-primary" href="index.php?pagina=ingreso"> Regresar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <?php
+        }
+        ?>
 
     </body>
 

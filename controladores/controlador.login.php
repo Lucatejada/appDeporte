@@ -17,7 +17,26 @@ if ($loginModel->login($nombre, $apellido, $cuil) == 0) {
     $_SESSION['datosMal'] = true;
 } else {
     session_start();
-    $_SESSION['ingreso'] = true;
-    $_SESSION['cuil'] = $cuil;
-    header("Location: ../index.php?pagina=principal");
+    $mdlLogin = new LoginModelo();
+    $dni = $mdlLogin->verificarDni($cuil);
+    $rol = $mdlLogin->verificarRol($dni);
+
+    switch ($rol) {
+
+        case "admin":
+            $_SESSION['ingreso'] = true;
+            $_SESSION['cuil'] = $cuil;
+            $_SESSION['rol'] = $rol;
+            $_SESSION['userName'] = $mdlLogin->mostrarUserName($dni);
+            header("Location: ../index.php?pagina=principal");
+            break;
+        case "profesor":
+            $_SESSION['ingreso'] = true;
+            $_SESSION['cuil'] = $cuil;
+            $_SESSION['rol'] = $rol;
+            $_SESSION['userName'] = $mdlLogin->mostrarUserName($dni);
+            header("Location: ../index.php?pagina=principal");
+            break;
+
+    }
 }

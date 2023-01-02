@@ -29,8 +29,6 @@ class controladorRegistro
         $distritos = $_POST['distritos'];
         $roles = $_POST['roles'];
 
-
-
         $mdlUsuario = new mdlUsuario();
         if ($mdlUsuario->registrarUsuarioM($cuil, $nombre, $apellido, $telefono,  $actividades, $distritos, $roles)) {
             $_SESSION['usuarioRegistrado'] = true;

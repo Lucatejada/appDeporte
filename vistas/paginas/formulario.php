@@ -10,9 +10,9 @@
 <body>
 
 
-    <section class="w3l-hotair-form" style="background-color: #e3f2fd;">
-        <div class="container">
-            <div class="workinghny-form-grid ">
+    <section class="w3l-hotair-form" style="background-color:#800080;">
+        <div class="container1">
+            <div class="workinghny-form-grid">
                 <div class="main-hotair1">
                     <div class="content-wthree">
 
@@ -23,8 +23,8 @@
                                 AÑO 2023 </h3>
 
                             <form action="vistas/inicio.php?c=controladorArchivo&a=ctrRespuestas" method="post" >
-                                <input style="width: 49%;" type="text" placeholder="Ingrese su nombre" name="nombre" required="">
-                                <input style="width: 50%;" type="text" placeholder="Ingrese su apellido" name="apellido" required="">
+                                <input style="width: 100%;" type="text" placeholder="Ingrese su nombre" name="nombre" required="">
+                                <input style="width: 100%;" type="text" placeholder="Ingrese su apellido" name="apellido" required="">
                                 <input style="width: 100%;" type="number" placeholder="Ingrese su DNI (solo numeros)" name="cuil" required="">
                                 <input style="width: 100%;" type="number" placeholder="Ingrese su telefono" name="telefono" required="">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su tipo de sangre" name="sangre" required=""> <br>
