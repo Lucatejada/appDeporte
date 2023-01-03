@@ -9,7 +9,7 @@ if (isset($_SESSION['ingreso'])) {
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- <link rel="shortcut icon" href="#" /> -->
+        <!-- Link datatables -->
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/b-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.css" />
@@ -37,7 +37,7 @@ if (isset($_SESSION['ingreso'])) {
     <body>
 
         <?php
-        if ($_SESSION['rol'] == "admin") {
+        if ($_SESSION['rol'] == "Administrador") {
         ?>
 
             <!--Ejemplo tabla con DataTables-->
@@ -76,8 +76,9 @@ if (isset($_SESSION['ingreso'])) {
                                                     <i class="bi bi-trash-fill"></i>
                                                 </a>
                                             </td>
-
                                         </tr>
+
+                                        <!-- MODAL EDITAR -->
 
                                         <div class="modal fade" id="editarUsuario<?= $asistencia['cuil'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
@@ -88,16 +89,17 @@ if (isset($_SESSION['ingreso'])) {
                                                     </div>
                                                     <form action="vistas/inicio.php?c=controladorFormularios&a=ctrActualizarRegistro" method="post">
                                                         <div class="modal-body">
-
                                                             <div class="mb-3">
-                                                                <label for="" class="form-label">Nombre completo</label>
-                                                                <input type="text" class="form-control" name="actualizarNombre" aria-describedby="helpId" placeholder="">
+                                                                <label for="" class="form-label">Editar Nombre</label>
+                                                                <input type="text" class="form-control" name="actualizarNombre" aria-describedby="helpId" value="<?= $asistencia["nombre"] ?>">
                                                             </div>
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Editar Apellido</label>
+                                                                <input type="text" class="form-control" name="actualizarApellido" aria-describedby="helpId" value="<?= $asistencia["apellido"] ?>">
+                                                            </div>
+
                                                             <input type="hidden" value="<?= $asistencia['cuil'] ?>" name="cuil">
                                                         </div>
-
-
-
 
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -131,7 +133,7 @@ if (isset($_SESSION['ingreso'])) {
 
         <!-- --------------------- PROFESOR --------------------------- -->
         <?php
-        if ($_SESSION['rol'] == "profesor") {
+        if ($_SESSION['rol'] == "Profesor") {
         ?>
 
             <!--Ejemplo tabla con DataTables-->

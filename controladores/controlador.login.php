@@ -9,7 +9,6 @@ $cuil = $_POST["cuil"];
 
 $loginModel = new LoginModelo();
 
-//almacena el numero de fila 
 
 if ($loginModel->login($nombre, $apellido, $cuil) == 0) {
     session_start();
@@ -22,15 +21,14 @@ if ($loginModel->login($nombre, $apellido, $cuil) == 0) {
     $rol = $mdlLogin->verificarRol($dni);
 
     switch ($rol) {
-
-        case "admin":
+        case "Administrador":
             $_SESSION['ingreso'] = true;
             $_SESSION['cuil'] = $cuil;
             $_SESSION['rol'] = $rol;
             $_SESSION['userName'] = $mdlLogin->mostrarUserName($dni);
             header("Location: ../index.php?pagina=principal");
             break;
-        case "profesor":
+        case "Profesor":
             $_SESSION['ingreso'] = true;
             $_SESSION['cuil'] = $cuil;
             $_SESSION['rol'] = $rol;

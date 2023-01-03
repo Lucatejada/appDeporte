@@ -1,11 +1,10 @@
 <div class="container1" style="background-color:#ffffff">
-    <!-- <h2> Agregar usuario al sistema </h2> -->
 
     <?php
     if ($_SESSION['cuilRepetido'] == true) {
     ?>
         <div class="alert alert-danger text-center" role="alert">
-            Usuario repetido <br>
+            DNI repetido <br>
             por favor inicie sesion.
         </div>
     <?php
@@ -31,12 +30,12 @@
 
         <div class="row mb-3">
             <label for="" class="form-label">DNI</label>
-            <input type="text" placeholder="Ingrese su DNI sin guiones ni puntos" name="cuil" required="" autofocus class="form-control">
+            <input type="number" placeholder="Ingrese su DNI sin guiones ni puntos" name="cuil" required="" autofocus class="form-control">
         </div>
 
         <div class="row mb-3">
             <label for="" class="form-label">Telefono</label>
-            <input type="text" placeholder="Ingrese su telefono" name="telefono" required="" autofocus class="form-control">
+            <input type="number" placeholder="Ingrese su telefono" name="telefono" required="" autofocus class="form-control">
         </div>
 
 
@@ -84,7 +83,7 @@
             </select>
         </div>
 
-        <div class="row mb-3">
+        <div class="text-right">
             <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         </div>
     </form>

@@ -12,10 +12,10 @@ class controladorFormularios
         }
         $tabla = "usuarios";
         $nombre =  $_POST["actualizarNombre"];
+        $apellido = $_POST["actualizarApellido"];
         $dni =  $_POST["cuil"];
-        // echo $mdlformulario->mdlActualizarRegistro($tabla, $nombre, $dni);
-
-        if ($mdlformulario->mdlActualizarRegistro($tabla, $nombre, $dni)){
+        
+        if ($mdlformulario->mdlActualizarRegistro($tabla, $nombre, $dni, $apellido)){
             $_SESSION['nombreActualizado'] = true; 
             header( "Location: ../index.php?pagina=principal");
         }

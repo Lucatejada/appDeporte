@@ -5,10 +5,10 @@ class ModeloFormularios extends Conexion
 {
 
 //actualizar REGISTROS
-    public function mdlActualizarRegistro($tabla, $nombre, $dni)
+    public function mdlActualizarRegistro($tabla, $nombre, $dni, $apellido)
     {
 
-        $sql = "UPDATE $tabla SET nombre='$nombre' where cuil='$dni'";
+        $sql = "UPDATE $tabla SET nombre='$nombre', apellido='$apellido' where cuil='$dni'";
         $resultado = $this->conexion->query($sql);
         
         if($resultado){
