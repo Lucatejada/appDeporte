@@ -35,7 +35,7 @@ error_reporting(E_ALL ^ E_WARNING);
             if ($_SESSION['datosMal'] == true) {
             ?>
                 <div class="alert alert-danger text-center" role="alert">
-                    Por favor
+                    Datos mal ingresados, por favor <br>
                     intente nuevamente.
                 </div>
             <?php
@@ -45,12 +45,12 @@ error_reporting(E_ALL ^ E_WARNING);
             <form action="controladores/controlador.login.php" method="post" class="border px-4 pt-3 pb-3" style="background-color: #ffffff">
 
                 <div class="row">
-                    <p class="fs-4">Acceder</p>
+                    <p class="fs-4 text-center">Acceder</p>
                 </div>
 
                 <div class="row mb-3">
                     <label for="" class="form-label">Nombre</label>
-                    <input type="text" placeholder="Ingrese su nombre" aria-describedby="helpId" name="nombre" required="" class="form-control">
+                    <input type="text" placeholder="Ingrese su nombre" aria-describedby="helpId" name="nombre" autofocus required="" class="form-control">
                 </div>
                 <div class="row mb-3">
                     <label for="" class="form-label">Apellido</label>

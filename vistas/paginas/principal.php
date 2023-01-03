@@ -36,22 +36,20 @@ if (isset($_SESSION['ingreso'])) {
 
     <body>
 
-
-
         <?php
         if ($_SESSION['rol'] == "admin") {
         ?>
 
             <!--Ejemplo tabla con DataTables-->
             <div class="container">
-
+                <h3 class="text-center"> Personal de Salud y Deporte</h3>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="table-responsive">
                             <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Cuil</th>
+                                        <th scope="col">DNI</th>
                                         <th scope="col">Nombre completo</th>
                                         <th scope="col">Actividad</th>
                                         <th scope="col">Distrito</th>
@@ -69,8 +67,47 @@ if (isset($_SESSION['ingreso'])) {
                                             <td><?= $asistencia["nombre_actividad"] ?></td>
                                             <td><?= $asistencia["nombre_distrito"] ?></td>
                                             <td><?= $asistencia["nombre_roles"] ?></td>
-                                            <td><?= $asistencia["nombre_roles"] ?></td>
+                                            <td>
+                                                <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#editarUsuario<?= $asistencia['cuil'] ?>">
+                                                    <i class="bi bi-pencil"></i>
+                                                </button>
+
+                                                <a class="btn btn btn-danger" href="vistas/inicio.php?c=controladorFormularios&a=ctrEliminarUsuario&dni=<?= $asistencia['cuil'] ?>">
+                                                    <i class="bi bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+
                                         </tr>
+
+                                        <div class="modal fade" id="editarUsuario<?= $asistencia['cuil'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <p class="modal-title fs-5" id="exampleModalLabel">Editar a <?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?> </p>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <form action="vistas/inicio.php?c=controladorFormularios&a=ctrActualizarRegistro" method="post">
+                                                        <div class="modal-body">
+
+                                                            <div class="mb-3">
+                                                                <label for="" class="form-label">Nombre completo</label>
+                                                                <input type="text" class="form-control" name="actualizarNombre" aria-describedby="helpId" placeholder="">
+                                                            </div>
+                                                            <input type="hidden" value="<?= $asistencia['cuil'] ?>" name="cuil">
+                                                        </div>
+
+
+
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                            <button type="submit" class="btn btn-warning">Guardar cambios</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     <?php
                                     }
                                     ?>
@@ -92,21 +129,21 @@ if (isset($_SESSION['ingreso'])) {
 
 
 
-        <!-- ------------------------------------------------ -->
+        <!-- --------------------- PROFESOR --------------------------- -->
         <?php
         if ($_SESSION['rol'] == "profesor") {
         ?>
 
             <!--Ejemplo tabla con DataTables-->
             <div class="container">
-
+                <h3 class="text-center"> Tabla personal de Salud y Deporte</h3>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="table-responsive">
                             <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Cuil</th>
+                                        <th scope="col">DNI</th>
                                         <th scope="col">Nombre completo</th>
                                         <th scope="col">Actividad</th>
                                         <th scope="col">Distrito</th>
