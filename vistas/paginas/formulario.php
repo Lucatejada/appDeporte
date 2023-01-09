@@ -201,11 +201,10 @@
                                     <br>Ingrese fotocopia del DNI
 
 
+                                    <input type="file" name="archivo">
                                 </p>
 
                                 <!-- <form action="vistas/paginas/subirArchivo.php" enctype="multipart/form-data" method="post"> -->
-                                    <input type="file" name="archivo">
-                                    <br>
                                     <!-- <button type="submit"> enviar</a> -->
                                 <!-- </form> -->
 

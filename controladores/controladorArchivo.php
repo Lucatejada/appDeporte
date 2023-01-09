@@ -104,25 +104,25 @@ class controladorArchivo
 
 
         // // print_r($_FILES['archivo']);
-        // $nombre = $_FILES['archivo']['name'];
-        // $guardado = $_FILES['archivo']['tmp_name'];
+        $nombre = $_FILES['archivo']['name'];
+        $guardado = $_FILES['archivo']['tmp_name'];
 
-        // if (!file_exists('archivos')) {
-        //     mkdir('archivos', 0777, true);
-        //     if (file_exists('archivos')) {
-        //         if (move_uploaded_file($guardado, '../../archivos/' . $nombre)) {
-        //             echo "Archivo guardado exitosamente";
-        //         } else {
-        //             echo "Archivo no guardado ";
-        //         }
-        //     }
-        // } else {
-        //     if (move_uploaded_file($guardado, '../../archivos/' . $nombre)) {
-        //         echo "Archivo guardado exitosamente";
-        //     } else {
-        //         echo "Archivo no guardado ";
-        //     }
-        // }
+        if (!file_exists('archivos')) {
+            mkdir('archivos', 0777, true);
+            if (file_exists('archivos')) {
+                if (move_uploaded_file($guardado, '../../archivos/' . $nombre)) {
+                    echo "Archivo guardado exitosamente";
+                } else {
+                    echo "Archivo no guardado ";
+                }
+            }
+        } else {
+            if (move_uploaded_file($guardado, '../../archivos/' . $nombre)) {
+                echo "Archivo guardado exitosamente";
+            } else {
+                echo "Archivo no guardado ";
+            }
+        }
 
         $mdlRespuestas = new mdlRespuestas();
         if ($mdlRespuestas->subirRespuestas(
@@ -151,7 +151,8 @@ class controladorArchivo
             $nombre_tutor,
             $dni_tutor,
             $telEmergencia,
-            $centro_asistencial
+            $centro_asistencial, 
+            $archivo
         )) {
             session_start();
             $_SESSION['formEnviado'] = true;
