@@ -1,15 +1,18 @@
 
 <?php
 // session_start();
+
+
+// se envian al modelo de respuestas
 class controladorArchivo
 {
-    
+
     public static function ctrRespuestas()
     {
         require_once("../modelos/modelo.respuestas.php");
         $nombre = $_POST["nombre"];
         $apellido = $_POST["apellido"];
-        $cuil = $_POST['cuil'];
+        $dni = $_POST['dni'];
         $telefono = $_POST["telefono"];
         $sangre = $_POST["sangre"];
         $peso = $_POST["peso"];
@@ -33,6 +36,8 @@ class controladorArchivo
         $dni_tutor = $_POST["dni_tutor"];
         $telEmergencia = $_POST["telEmergencia"];
         $centro_asistencial = $_POST["centro_asistencial"];
+        $nombre = $_FILES['archivo']['name'];
+        $guardado = $_FILES['archivo']['tmp_name'];
 
 
         if ($uno == "si") {
@@ -103,10 +108,7 @@ class controladorArchivo
         }
 
 
-        // // print_r($_FILES['archivo']);
-        $nombre = $_FILES['archivo']['name'];
-        $guardado = $_FILES['archivo']['tmp_name'];
-
+        // // print_r($_FILES['archivo'])
         if (!file_exists('archivos')) {
             mkdir('archivos', 0777, true);
             if (file_exists('archivos')) {
@@ -124,11 +126,22 @@ class controladorArchivo
             }
         }
 
+        // $userModel = new mdlRespuestas();
+        // if ($userModel->registrarUsuarioGM($dni, $nombre, $apellido, $telefono)) {
+        //     session_start();
+        //     $_SESSION['bienGral'] = true;
+        //     header("Location: ../index.php?pagina=verArchivos");
+        // } else {
+        //     session_start();
+        //     $_SESSION['malGral'] = true;
+        //     header("Location: ../index.php?pagina=verArchivos");
+        // }
+
         $mdlRespuestas = new mdlRespuestas();
         if ($mdlRespuestas->subirRespuestas(
             $nombre,
             $apellido,
-            $cuil,
+            $dni,
             $telefono,
             $sangre,
             $peso,
@@ -151,9 +164,10 @@ class controladorArchivo
             $nombre_tutor,
             $dni_tutor,
             $telEmergencia,
-            $centro_asistencial, 
+            $centro_asistencial,
             $archivo
         )) {
+            $mdlRespuestas->registrarUsuarioGM($dni, $nombre, $apellido, $telefono);
             session_start();
             $_SESSION['formEnviado'] = true;
             header("Location: ../index.php?pagina=verArchivos");
@@ -164,5 +178,6 @@ class controladorArchivo
         }
     }
 }
+
 
 ?>

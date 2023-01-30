@@ -26,7 +26,7 @@ error_reporting(0);
             $('#table').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                    'excel', 'print'
+                    'excel', 'print', 'pdf'
                 ],
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
@@ -77,7 +77,7 @@ error_reporting(0);
                                 <th scope="col">Telefono</th>
                                 <th scope="col">Sangre</th>
                                 <th scope="col">Peso (kg)</th>
-                                <th scope="col">Talle (m)</th>
+                                <th scope="col">Talle (cm)</th>
                                 <th scope="col">El que se suscribe</th>
                                 <th scope="col">Tel. Emergencia</th>
                                 <th scope="col">Accion</th>
@@ -171,10 +171,11 @@ error_reporting(0);
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="" class="form-label">Sugerencias</label>
-                                                    <input type="text" class="form-control" value="" <?= $asistencia["quince"] ?>" aria-describedby="helpId" placeholder="" disabled>
+                                                    <input type="text" class="form-control" value=" <?= $asistencia["quince"] ?>" aria-describedby="helpId" placeholder="" disabled>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar Datos</button>
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                 <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                                             </div>

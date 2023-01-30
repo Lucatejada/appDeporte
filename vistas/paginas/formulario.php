@@ -1,9 +1,17 @@
+
+
 <head>
 
     <meta charset="utf-8">
     <link href="css/style.css" rel='stylesheet' type='text/css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
     <title>Declaracion jurada</title>
+
+
 
 </head>
 
@@ -15,35 +23,51 @@
             <div class="workinghny-form-grid">
                 <div class="main-hotair1">
                     <div class="content-wthree">
-
-
                         <h5 class="text-left">MENORES DE 18 AÑOS</h6> <br><br><br>
                             <h3 class="text-center">DECLARACION JURADA DE SALUD <br>
                                 ACTIVIDADES DEPORTIVAS <br>
                                 AÑO 2023 </h3>
+                            <hr><br>
 
-                            <form action="vistas/inicio.php?c=controladorArchivo&a=ctrRespuestas" method="post" >
+                            <form action="vistas/inicio.php?c=controladorArchivo&a=ctrRespuestas" method="post" required="">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su nombre" name="nombre" required="">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su apellido" name="apellido" required="">
-                                <input style="width: 100%;" type="number" placeholder="Ingrese su DNI (solo numeros)" name="cuil" required="">
+                                <input style="width: 100%;" type="number" placeholder="Ingrese su DNI (solo numeros)" name="dni" required="">
                                 <input style="width: 100%;" type="number" placeholder="Ingrese su telefono" name="telefono" required="">
                                 <input style="width: 100%;" type="text" placeholder="Ingrese su tipo de sangre" name="sangre" required=""> <br>
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su peso en kg" name="peso" required="">
-                                <input style="width: 100%;" type="text" placeholder="Ingrese su talle en cm" name="talle" required="">
+                                <input style="width: 100%;" type="number" placeholder="Ingrese su peso en kg" name="peso" required="">
+                                <input style="width: 100%;" type="number" placeholder="Ingrese su talle en cm" name="talle" required="">
+
+                                <div class="row mb-3">
+                                    <select aria-label="Default select example" name="distritos" required="" class="form-control">
+                                        <option selected>Seleccione su distrito</option>
+                                        <?php
+                                        foreach ($listaDistritos as $distritos) {
+                                        ?>
+                                            <option value="<?= $distritos['id']?>"> <?= $distritos['nombre']?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+
                                 <br>
                                 <h4> Preguntas: </h4>
                                 <br>
 
+
                                 <div>
                                     <p class="fs-5">01. ¿Tuvo enfermedades dentro de los 60 días anteriores al comienzo de clases?</p>
-                                    <input class="form-check-input" type="radio" name="uno" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="uno" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="uno" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
                                 </div>
+
                                 <div>
                                     <p class="fs-5">02. ¿Sufre algun problema cardiovascular?</p>
-                                    <input class="form-check-input" type="radio" name="dos" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="dos" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="dos" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
@@ -51,7 +75,7 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">03. ¿Sufre algun problema respiratorio?</p>
-                                    <input class="form-check-input" type="radio" name="tres" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="tres" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="tres" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
@@ -59,15 +83,19 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">04. ¿Sufre de alergia?</p>
-                                    <input class="form-check-input" type="radio" name="cuatro" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="cuatro" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="cuatro" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
 
                                 </div>
                                 <div>
-                                    <p class="fs-5">05. ¿Que enfermades ha sufrido?</p>
-                                    <input class="form-check-input" type="checkbox" name="cinco[]" value="sarampion" required="">
+                                    <p class="fs-5">05. ¿A sufrifo alguna de estas enfermedades?</p>
+                                    <input class="form-check-input" type="radio" name="cinco[]" value="si">
+                                    <label class="form-check-label" for="inlineRadio1">SI</label>
+                                    <input class="form-check-input" type="radio" name="cinco[]" value="no">
+                                    <label class="form-check-label" for="inlineRadio2">NO</label> <br>
+                                    <input class="form-check-input" type="checkbox" name="cinco[]" value="sarampion">
                                     <label class="form-check-label" for="inlineRadio1">Sarampion</label> <br>
                                     <input class="form-check-input" type="checkbox" name="cinco[]" value="varicela">
                                     <label class="form-check-label" for="inlineRadio2">Varicela</label> <br>
@@ -81,7 +109,7 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">06. ¿Tuvo operaciones?</p>
-                                    <input class="form-check-input" type="radio" name="seis[]" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="seis[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="seis[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
@@ -89,7 +117,7 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">07. ¿Tuvo fracturas? </p>
-                                    <input class="form-check-input" type="radio" name="siete[]" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="siete[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="siete[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
@@ -97,7 +125,7 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">08. ¿Tiene problemas en la columna vertebral?</p>
-                                    <input class="form-check-input" type="radio" name="ocho[]" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="ocho[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="ocho[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label> <br>
@@ -108,11 +136,11 @@
                                     <input class="form-check-input" type="checkbox" name="ocho[]" value="lordosis">
                                     <label class="form-check-label" for="inlineRadio2">Lordosis</label> <br>
                                     <input style="width: 100%;" type="text" placeholder="Otra..." name="ocho[]">
-                                    <input style="width: 100%;" type="text" placeholder="Desconoce" name="ocho[]">
+                                    <!-- <input style="width: 100%;" type="text" placeholder="Desconoce" name="ocho[]"> -->
                                 </div>
                                 <div>
                                     <p class="fs-5">09. ¿Tiene problemas de visión?</p>
-                                    <input class="form-check-input" type="radio" name="nueve[]" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="nueve[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="nueve[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label>
@@ -120,7 +148,7 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">10. ¿Tiene problemas endocrinos?</p>
-                                    <input class="form-check-input" type="radio" name="diez[]" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="diez[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="diez[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label> <br>
@@ -134,7 +162,7 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">11. ¿Tiene problemas del sistema nervioso?</p>
-                                    <input class="form-check-input" type="radio" name="once[]" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="once[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="once[]" value="no">
                                     <label class="form-check-label" for="inlineRadio2">NO</label> <br>
@@ -163,7 +191,7 @@
                                 </div> -->
                                 <div>
                                     <p class="fs-5">13. ¿Posee alguna limitacion para hacer actividad fisica?</p>
-                                    <input class="form-check-input" type="radio" name="trece[]" value="si" required="">
+                                    <input class="form-check-input" type="radio" name="trece[]" value="si">
                                     <label class="form-check-label" for="inlineRadio1">SI</label>
                                     <input class="form-check-input" type="radio" name="trece[]" value="no">
                                     <label class="form-check-label" for="checkbox">NO</label>
@@ -171,7 +199,7 @@
                                 </div>
                                 <div>
                                     <p class="fs-5">14. ¿En la actualidad vive con: ?</p>
-                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="padre" required="">
+                                    <input class="form-check-input" type="checkbox" name="catorce[]" value="padre">
                                     <label class="form-check-label" for="inlineRadio1">Padre</label><br>
                                     <input class="form-check-input" type="checkbox" name="catorce[]" value="madre">
                                     <label class="form-check-label" for="inlineRadio1">Madre</label><br>
@@ -187,8 +215,8 @@
                                 </div>
 
 
-                                <p> El que se suscribe Padre, Madre o Tutor del alumno/a <input type="text" placeholder="" name="nombre_tutor" required=""> <br>
-                                    DNI <input type="number" name="dni_tutor" required=""> <br>
+                                <p> El que se suscribe Padre, Madre o Tutor del alumno/a <input type="text" placeholder="" name="nombre_tutor"> <br>
+                                    DNI <input type="number" name="dni_tutor"> <br>
                                     AUTORIZO/A a mi hijo/a a que realice actividades fisicas de acuerdo a su edad, en compañia de los profesionales designados,
                                     que tendran a su cargo las responsabilidades emergentes en los textos legales vigentesd arts. 1749, 1751, 1755 y cctes de CC y CN,
                                     resoluciones 416/84, 154/87 y/o la responsabilidad estatal conforme la Ley n° 26.944 en caso de existir. <br>
@@ -201,11 +229,11 @@
                                     <br>Ingrese fotocopia del DNI
 
 
-                                    <input type="file" name="archivo">
+                                    <input type="file" name="archivo" enctype="multipart/form-data">
                                 </p>
 
                                 <!-- <form action="vistas/paginas/subirArchivo.php" enctype="multipart/form-data" method="post"> -->
-                                    <!-- <button type="submit"> enviar</a> -->
+                                <!-- <button type="submit"> enviar</a> -->
                                 <!-- </form> -->
 
 
@@ -217,6 +245,8 @@
             </div>
         </div>
     </section>
+
+
 
 </body>
 

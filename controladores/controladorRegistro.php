@@ -17,6 +17,15 @@ class controladorRegistro
         require_once("vistas/paginas/registro.php");
     }
 
+    public static function mostrarPersonas(){
+        require_once("modelos/modelo.respuestas.php");        
+        $mdlPersonas = new mdlRespuestas();
+        $listaPersonas = $mdlPersonas->mostrarPersonas();
+        require_once("vistas/plantilla.php");
+        require_once("vistas/paginas/principal.php");
+    }
+
+
     public static function registrarUsuario()
     {
         require_once("../modelos/modelo.usuario.php");

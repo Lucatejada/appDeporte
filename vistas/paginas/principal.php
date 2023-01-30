@@ -9,6 +9,7 @@ if (isset($_SESSION['ingreso'])) {
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="../../images/logo.png">
         <!-- Link datatables -->
         <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.1/b-2.3.3/b-html5-2.3.3/b-print-2.3.3/datatables.min.css" />
@@ -22,7 +23,7 @@ if (isset($_SESSION['ingreso'])) {
                 $('#table').DataTable({
                     dom: 'Bfrtip',
                     buttons: [
-                        'excel', 'print'
+                        'excel', 'print', 'pdf'
                     ],
                     "language": {
                         "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
@@ -39,6 +40,192 @@ if (isset($_SESSION['ingreso'])) {
         <?php
         if ($_SESSION['rol'] == "Administrador") {
         ?>
+
+            <div class="container fs-6 ">
+
+                <p class="fs-6 fw-bold text-center"></p>
+
+                <div class="row mb-3">
+
+                    <div class=" mb-3">
+                        <div class="rounded bg-light px-4 pt-3 pb-3">
+                            <p class="fs-6">Bienvenido <?= $_SESSION['nombre'] ?></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-6 mb-3">
+
+                        <div class="rounded bg-light px-4 pt-3 pb-3">
+
+                            <!--  USUARIOS  -->
+
+                            <p class="fs-6"> Personas Registradas </p>
+
+                            <div class="row mb-3 justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="card border-success mb-3">
+                                        <div class="card-header">Datos de Deporte</div>
+                                        <a class="text-success" href="index.php?c=EstadisticasController&a=mostrarRtas">
+                                            <div class="card-body text-center">
+
+                                                <h5 class="card-title fs-2"> <?= $registroSalud ?> </h5>
+                                                <p class="card-text "> Personas registadas en total</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 mb-3">
+
+                        <div class="rounded bg-light px-4 pt-3 pb-3">
+
+                            <!--  Distritos  -->
+
+                            <p class="fs-6">Distritos de Guaymallén</p>
+
+                            <div class="row mb-3 justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="card border-success mb-3">
+                                        <div class="card-header">Cantidad</div>
+                                        <a class="text-success" href="index.php?c=DistritosController&a=index">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title fs-2"><?= $cantDistritos ?></h5>
+                                                <p class="card-text">En total</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!--Segunda fila-->
+
+                <div class="row mb-3">
+
+                    <div class="col-lg-6 mb-3">
+
+                        <div class="rounded bg-light px-4 pt-3 pb-3">
+
+
+
+                            <p class="fs-6">Personas registradas</p>
+
+                            <div class="row mb-3 justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="card border-success mb-3">
+                                        <div class="card-header">Cantidad</div>
+                                        <a class="text-success" href="index.php?c=UsuariosController&a=index">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title fs-2"><?= $cantPersonas ?></h5>
+                                                <p class="card-text">En total</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-center">
+
+                                <div class="col-lg-4">
+
+                                    <div class="card border-success mb-3">
+                                        <div class="card-header">Hombres</div>
+                                        <a class="text-success" href="index.php?c=UsuariosController&a=index">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title fs-2"><?= $cantHombres ?></h4>
+                                                <p class="card-text">Total</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4">
+
+                                    <div class="card border-success mb-3">
+                                        <div class="card-header">Mujeres</div>
+                                        <a class="text-success" href="index.php?c=UsuariosController&a=index">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title fs-2"><?= $cantMujeres ?></h4>
+                                                <p class="card-text">Total</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4">
+
+                                    <div class="card border-success mb-3">
+                                        <div class="card-header">No binario</div>
+                                        <a class="text-success" href="index.php?c=UsuariosController&a=index">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title fs-2"><?= $cantNb ?></h4>
+                                                <p class="card-text">Total</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 mb-3">
+
+                        <div class="rounded bg-light px-4 pt-3 pb-3">
+
+                            <p class="fs-6">Distritos de Guaymallén</p>
+
+                            <div class="row mb-3 justify-content-center">
+                                <div class="col-lg-6">
+                                    <div class="card border-success mb-3">
+                                        <div class="card-header">Cantidad</div>
+                                        <a class="text-success" href="index.php?c=DistritosController&a=index">
+                                            <div class="card-body text-center">
+                                                <h5 class="card-title fs-2"><?= $cantDistritos ?></h5>
+                                                <p class="card-text">En total</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
 
             <!--Ejemplo tabla con DataTables-->
             <div class="container">

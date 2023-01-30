@@ -42,7 +42,7 @@ error_reporting(E_ALL ^ E_WARNING);
                 unset($_SESSION['datosMal']);
             }
             ?>
-            <form action="controladores/controlador.login.php" method="post" class="border px-4 pt-3 pb-3" style="background-color: #ffffff">
+            <form action="controladores/controlador.login.php" method="post" class="border px-4 pt-3 pb-3 bg-light">
 
                 <div class="row">
                     <p class="fs-4 text-center">Acceder</p>

@@ -53,6 +53,8 @@
             </select>
         </div>
 
+        <!-- distritos  -->
+        
         <div class="row mb-3">
             <label for="" class="form-label">Distrito</label>
             <select aria-label="Default select example" name="distritos" required="" class="form-control">

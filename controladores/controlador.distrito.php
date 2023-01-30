@@ -6,6 +6,7 @@ class ctrDistrito {
         require_once("modelos/modelo.distrito.php");
         $mdlDistritos = new mdlDistrito(); 
         $listaDistritos = $mdlDistritos->mostrarDistrito();
+        require_once("vistas/paginas/formulario.php"); 
         require_once("vistas/paginas/registro.php"); 
     }
 }

@@ -27,7 +27,7 @@ if (isset($_GET['pagina'])) {
             break;
         case 'formulario':
             // require_once('vistas/plantilla.php');
-            require_once('vistas/paginas/formulario.php');
+            require_once('vistas/paginas/formulario.hp');
             break;
         case 'salir':
             require_once('vistas/plantilla.php');
