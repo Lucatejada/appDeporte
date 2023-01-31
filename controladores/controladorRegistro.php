@@ -32,18 +32,18 @@ class controladorRegistro
         session_start();
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
-        $cuil = $_POST['cuil'];
+        $dni = $_POST['dni'];
         $telefono = $_POST['telefono'];
         $actividades = $_POST['actividades'];
         $distritos = $_POST['distritos'];
         $roles = $_POST['roles'];
 
         $mdlUsuario = new mdlUsuario();
-        if ($mdlUsuario->registrarUsuarioM($cuil, $nombre, $apellido, $telefono,  $actividades, $distritos, $roles)) {
+        if ($mdlUsuario->registrarUsuarioM($dni, $nombre, $apellido, $telefono,  $actividades, $distritos, $roles)) {
             $_SESSION['usuarioRegistrado'] = true;
             header("Location: ../index.php?pagina=ingreso");
         } else {
-            $_SESSION['cuilRepetido'] = true;
+            $_SESSION['dniRepetido'] = true;
             header("Location: ../index.php?pagina=registro");
         }
     }

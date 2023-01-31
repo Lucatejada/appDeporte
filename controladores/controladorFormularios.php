@@ -13,7 +13,7 @@ class controladorFormularios
         $tabla = "usuarios";
         $nombre =  $_POST["actualizarNombre"];
         $apellido = $_POST["actualizarApellido"];
-        $dni =  $_POST["cuil"];
+        $dni =  $_POST["dni"];
         
         if ($mdlformulario->mdlActualizarRegistro($tabla, $nombre, $dni, $apellido)){
             $_SESSION['nombreActualizado'] = true; 

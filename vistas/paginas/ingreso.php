@@ -58,7 +58,7 @@ error_reporting(E_ALL ^ E_WARNING);
                 </div>
                 <div class="row mb-3">
                     <label for="" class="form-label">DNI</label>
-                    <input type="text" placeholder="Ingrese su DNI" name="cuil" required="" autofocus class="form-control">
+                    <input type="text" placeholder="Ingrese su DNI" name="dni" required="" autofocus class="form-control">
                 </div>
 
                 <div class="row mb-3">

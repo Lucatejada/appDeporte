@@ -236,6 +236,11 @@
                                 <!-- <button type="submit"> enviar</a> -->
                                 <!-- </form> -->
 
+                                <label class="form-check-label" for="inlineRadio1">Acepto las normas de convivencia</label><br>
+                                <input class="form-check-input" type="checkbox" name="normas" value="normas">
+
+
+
 
                                 <br><button class="btn" type="submit">Inscribite</button>
                             </form>

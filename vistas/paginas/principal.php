@@ -249,17 +249,17 @@ if (isset($_SESSION['ingreso'])) {
                                     foreach ($listaAsistencia as $asistencia) {
                                     ?>
                                         <tr>
-                                            <td> <?= $asistencia["cuil"] ?></td>
+                                            <td> <?= $asistencia["dni"] ?></td>
                                             <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
                                             <td><?= $asistencia["nombre_actividad"] ?></td>
                                             <td><?= $asistencia["nombre_distrito"] ?></td>
                                             <td><?= $asistencia["nombre_roles"] ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#editarUsuario<?= $asistencia['cuil'] ?>">
+                                                <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#editarUsuario<?= $asistencia['dni'] ?>">
                                                     <i class="bi bi-pencil"></i>
                                                 </button>
 
-                                                <a class="btn btn btn-danger" href="vistas/inicio.php?c=controladorFormularios&a=ctrEliminarUsuario&dni=<?= $asistencia['cuil'] ?>">
+                                                <a class="btn btn btn-danger" href="vistas/inicio.php?c=controladorFormularios&a=ctrEliminarUsuario&dni=<?= $asistencia['dni'] ?>">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </a>
                                             </td>
@@ -267,7 +267,7 @@ if (isset($_SESSION['ingreso'])) {
 
                                         <!-- MODAL EDITAR -->
 
-                                        <div class="modal fade" id="editarUsuario<?= $asistencia['cuil'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal fade" id="editarUsuario<?= $asistencia['dni'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -285,7 +285,7 @@ if (isset($_SESSION['ingreso'])) {
                                                                 <input type="text" class="form-control" name="actualizarApellido" aria-describedby="helpId" value="<?= $asistencia["apellido"] ?>">
                                                             </div>
 
-                                                            <input type="hidden" value="<?= $asistencia['cuil'] ?>" name="cuil">
+                                                            <input type="hidden" value="<?= $asistencia['dni'] ?>" name="dni">
                                                         </div>
 
                                                         <div class="modal-footer">
@@ -344,7 +344,7 @@ if (isset($_SESSION['ingreso'])) {
                                     foreach ($listaAsistencia as $asistencia) {
                                     ?>
                                         <tr>
-                                            <td> <?= $asistencia["cuil"] ?></td>
+                                            <td> <?= $asistencia["dni"] ?></td>
                                             <td><?= $asistencia["nombre"] . " " . $asistencia["apellido"] ?></td>
                                             <td><?= $asistencia["nombre_actividad"] ?></td>
                                             <td><?= $asistencia["nombre_distrito"] ?></td>

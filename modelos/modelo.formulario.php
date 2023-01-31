@@ -8,7 +8,7 @@ class ModeloFormularios extends Conexion
     public function mdlActualizarRegistro($tabla, $nombre, $dni, $apellido)
     {
 
-        $sql = "UPDATE $tabla SET nombre='$nombre', apellido='$apellido' where cuil='$dni'";
+        $sql = "UPDATE $tabla SET nombre='$nombre', apellido='$apellido' where dni='$dni'";
         $resultado = $this->conexion->query($sql);
         
         if($resultado){
@@ -23,7 +23,7 @@ class ModeloFormularios extends Conexion
     public function mdlEliminarUsuario($tabla, $dni)
     {
 
-        $sql = "DELETE FROM $tabla WHERE cuil='$dni'";
+        $sql = "DELETE FROM $tabla WHERE dni='$dni'";
         $resultado = $this->conexion->query($sql);
         if($resultado){
             return true;
